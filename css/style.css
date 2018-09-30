@@ -1,0 +1,80 @@
+html {
+  	font-family: sans-serif;
+}
+
+h1{
+ 	margin: .67em 0;
+  	font-size: 3.75em;
+  	margin-bottom: -5px;
+  	font-weight: lighter;
+}
+
+nav{
+	margin-top: 100px;
+	margin: 0px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	background-color: #292828;
+	width: 100%;
+	position: sticky;
+	left: -4px;
+  	min-height: 50px;
+}
+
+nav ul{
+	list-style: none;
+}
+
+nav ul li{
+	display: inline-block;
+	padding-right: 15px;
+	padding-left: 15px;
+	font-size: 15px;
+	cursor: pointer;
+	color: #9d9d9d;
+}
+
+nav ul a:link li {
+	color: #9d9d9d;
+	text-decoration: none;
+}
+
+nav ul a:visited li {
+	color: #9d9d9d;
+	text-decoration: none;
+}
+
+nav ul a:hover li {
+	color: white;
+	text-decoration: none;
+}
+
+nav ul a:active li {
+	color: rgba(254, 88, 88, 1);
+}
+
+.jumbotron .container p{
+	font-size: 20px;
+}
+
+.jumbotron{
+	padding: 30px;
+	margin-bottom: 15px;
+}
+
+body{
+	background-color: #ffb800;
+	color: #ffffff;
+	margin: 0;
+}
+
+.text-center{
+	text-align: center;
+}
+
+.container{
+	padding-right: 15px;
+  	padding-left: 15px;
+  	margin-right: auto;
+  	margin-left: auto;
+}
