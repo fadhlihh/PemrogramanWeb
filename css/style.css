@@ -14,6 +14,11 @@ h1{
   src: url('../fonts/glyphicons-halflings-regular.eot');
   src: url('../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/glyphicons-halflings-regular.woff2') format('woff2'), url('../fonts/glyphicons-halflings-regular.woff') format('woff'), url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
 }
+
+.navbar-right{
+	float: right;
+}
+
 .glyphicon {
   position: relative;
   top: 1px;
@@ -40,12 +45,12 @@ nav{
 	background-color: #292828;
 	width: 100%;
 	position: sticky;
-	left: -4px;
   	min-height: 50px;
 }
 
 nav ul{
 	list-style: none;
+	display: inline-block;
 }
 
 nav ul li{
