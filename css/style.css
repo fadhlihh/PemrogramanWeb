@@ -8,12 +8,40 @@ h1{
   	margin-bottom: -5px;
   	font-weight: lighter;
 }
+
+body{
+	background-color: #ffb800;
+	color: #ffffff;
+	margin: 0;
+}
+
+.text-center{
+	text-align: center;
+}
+
+.container{
+	padding-right: 15px;
+  	padding-left: 15px;
+  	margin-right: auto;
+  	margin-left: auto;
+}
+
+.jumbotron .container p{
+	font-size: 20px;
+}
+
+.jumbotron{
+	padding: 30px;
+	margin-bottom: 15px;
+}
+
 @font-face {
   font-family: 'Glyphicons Halflings';
 
   src: url('../fonts/glyphicons-halflings-regular.eot');
   src: url('../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/glyphicons-halflings-regular.woff2') format('woff2'), url('../fonts/glyphicons-halflings-regular.woff') format('woff'), url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
 }
+
 .glyphicon {
   position: relative;
   top: 1px;
@@ -32,20 +60,33 @@ h1{
 .glyphicon-shopping-cart:before {
   content: "\e116";
 }
+
+.glyphicon-search:before {
+  content: "\e003";
+}
+
+.navbar-right{
+	float: right;
+}
+
 nav{
 	margin-top: 100px;
 	margin: 0px;
 	padding-top: 2px;
 	padding-bottom: 2px;
+	top: 0px;
 	background-color: #292828;
 	width: 100%;
 	position: sticky;
-	left: -4px;
+	position: -webkit-sticky;
+	position: -moz-sticky;
+	z-index: 3;
   	min-height: 50px;
 }
 
 nav ul{
 	list-style: none;
+	display: inline-block;
 }
 
 nav ul li{
@@ -76,28 +117,12 @@ nav ul a:active li {
 	color: rgba(254, 88, 88, 1);
 }
 
-.jumbotron .container p{
-	font-size: 20px;
+.content{
+	min-height: 1000px; 
+	min-width: 80%;
 }
 
-.jumbotron{
-	padding: 30px;
-	margin-bottom: 15px;
-}
-
-body{
-	background-color: #ffb800;
-	color: #ffffff;
-	margin: 0;
-}
-
-.text-center{
-	text-align: center;
-}
-
-.container{
-	padding-right: 15px;
-  	padding-left: 15px;
-  	margin-right: auto;
-  	margin-left: auto;
+footer{
+	background-color: #292828;
+	padding:20px;
 }
