@@ -35,36 +35,6 @@ body{
 	margin-bottom: 15px;
 }
 
-@font-face {
-  font-family: 'Glyphicons Halflings';
-
-  src: url('../fonts/glyphicons-halflings-regular.eot');
-  src: url('../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/glyphicons-halflings-regular.woff2') format('woff2'), url('../fonts/glyphicons-halflings-regular.woff') format('woff'), url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
-}
-
-.glyphicon {
-  position: relative;
-  top: 1px;
-  display: inline-block;
-  font-family: 'Glyphicons Halflings';
-  font-style: normal;
-  font-weight: normal;
-  line-height: 1;
-
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-.glyphicon-user:before {
-  content: "\e008";
-}
-.glyphicon-shopping-cart:before {
-  content: "\e116";
-}
-
-.glyphicon-search:before {
-  content: "\e003";
-}
-
 .navbar-right{
 	float: right;
 }
@@ -118,11 +88,41 @@ nav ul a:active li {
 }
 
 .content{
-	min-height: 1000px; 
+	min-height: 100%; 
 	min-width: 80%;
 }
 
+table{
+	margin-top: 40px;
+	margin-left: 5px;
+	margin-right: 5px;
+	color:black;
+	border-collapse: collapse;
+}
+
 footer{
+	margin-top: 30px;
 	background-color: #292828;
 	padding:20px;
+}
+
+.row{
+	margin-left: 140px;
+	margin-right: 10px;
+}
+
+.col-sm-3{
+	margin-right: 30px;
+}
+
+.dtl{
+	text-align: right;
+}
+
+input[type="button"]{
+	color:white;
+	background-color: red;
+	border: none;
+	padding: 10px;
+	border-radius: 5px;
 }
