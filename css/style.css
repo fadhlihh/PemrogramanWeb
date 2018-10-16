@@ -159,6 +159,18 @@ footer{
 .dtl{
 	text-align: right;
 }
+.list {
+  padding-left: 0;
+  margin-bottom: 20px;
+}
+.list-item {
+  position: relative;
+  display: block;
+  padding: 10px 15px;
+  margin-bottom: -1px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+}
 
 input[type="button"]{
 	color:white;
