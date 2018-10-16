@@ -38,7 +38,47 @@ body{
 .navbar-right{
 	float: right;
 }
-
+.panel {
+  margin-bottom: 20px;
+  background-color: #292828;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
+          box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
+}
+.panel-body {
+  padding: 15px;
+}
+.panel-heading {
+  padding: 10px 15px;
+  border-bottom: 1px solid transparent;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+.panel-footer {
+  padding: 10px 15px;
+  background-color: #292828;
+  border-top: 1px solid #ddd;
+  border-bottom-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+/*
+.panel-primary {
+  border-color: #337ab7;
+}
+.panel-danger {
+  border-color: #ebccd1;
+}
+.panel-success {
+  border-color: #d6e9c6;
+}
+.panel-info {
+  border-color: #bce8f1;
+}
+.panel-warning {
+  border-color: #faebcc;
+}
+*/
 nav{
 	margin-top: 100px;
 	margin: 0px;
@@ -88,7 +128,7 @@ nav ul a:active li {
 }
 
 .content{
-	min-height: 100%; 
+	min-height: 100%;
 	min-width: 80%;
 }
 
