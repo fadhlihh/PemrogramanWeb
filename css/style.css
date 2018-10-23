@@ -62,23 +62,16 @@ body{
   border-bottom-right-radius: 3px;
   border-bottom-left-radius: 3px;
 }
-/*
-.panel-primary {
-  border-color: #337ab7;
+
+.gambar-main{
+	background-color: #fff;
+	max-width: 300px;
+	max-height: 300px;
 }
-.panel-danger {
-  border-color: #ebccd1;
+
+.gambar-sub{
 }
-.panel-success {
-  border-color: #d6e9c6;
-}
-.panel-info {
-  border-color: #bce8f1;
-}
-.panel-warning {
-  border-color: #faebcc;
-}
-*/
+
 nav{
 	margin-top: 100px;
 	margin: 0px;

@@ -15,18 +15,7 @@
 		    <p>Belanja Online Di Universitas Padjadjaran</p>
 		  </div>
 		</div>
-		<nav>
-			<ul>
-				<a href="home.html"><li>Beranda</li></a>
-				<a href="#"><li>Kategori</li></a>
-				<a href="#"><li>Contact</li></a>
-			</ul>
-			<ul class="navbar-right">
-				<a href="#"><li><span class="fas fa-user"></span> Your Account</li></a>
-				<a href="#"><li><span class="fas fa-search"></span></li></a>
-			</ul>
-		</nav>
-		<br>
+		<?php require("navbar.php");?>
 		<div class="content">
 			<div class="row">
 				<div class="col-sm-4">
@@ -53,8 +42,6 @@
 				</div>
 			</div>
 		</div>
-		<footer class="container-fluid text-center">
-		  <p>Padjajaran Online Market Copyright</p>
-		</footer>
+		<?php require("footer.php"); ?>
 	</body>
 </html>
