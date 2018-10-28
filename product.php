@@ -11,25 +11,20 @@
 	<div class="content">
 		<div class="row">
 			<div class="col-sm-3">
-				<div class="row">
-					<img src="image_product/sapu1.jpg" class="gambar-main">
-				</div>
-				<div class="row">
-					<div class="col-4">
-						<img src="" class="gambar-sub">
-					</div>
-					<div class="col-4">
-						<img src="" class="gambar-sub">
-					</div>
-					<div class="col-4">
-						<img src="" class="gambar-sub">
-					</div>
-					<div class="col-4">
-						<img src="" class="gambar-sub">
-					</div>
-				</div>
+				<table>
+					<tr align="center"><td><img src="image_product/sapu1.jpg" class="gambar-main" height="300px" width="300px"></td></tr>
+					<tr align="center">
+						<td><img src="image_product/sapu1.jpg" class="gambar-sub" height="71" width="71">
+							<img src="image_product/sapu2.jpg" class="gambar-sub" height="71" width="71">
+							<img src="image_product/sapu3.jpg" class="gambar-sub" height="71" width="71">
+							<img src="image_product/sapu4.jpg" class="gambar-sub" height="71" width="71">
+					</tr>
+				</table>
 			</div>
-			<div class="col-sm-3"></div>
+			<div class="col-sm-3 info">
+				<h3>Nama Produk</h3>
+				<h2>Rp.0</h2>
+			</div>
 		</div>
 	</div>
 	<?php require("footer.php"); ?>
