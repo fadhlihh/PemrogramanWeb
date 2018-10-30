@@ -267,6 +267,7 @@ PRODUCT PAGE
 /*Informasi Barang*/
 .info{
 	margin-top: 20px;
+	color: #000;
 }
 .info table{
   border-collapse: separate;

@@ -29,7 +29,7 @@
 			<center>
 				<form method="post">
 					<table class="tbl-signin">
-						<tr><td><input type="text" name="username" placeholder="Username / Email"></td></tr>
+						<tr><td><input type="text" name="username" placeholder="Username / Email / NPM"></td></tr>
 						<tr><td><input type="Password" name="password" placeholder="Kata Sandi"></td></tr>
 						<tr><td width="100%"><input type="submit" name="submit" value="Sign In"></td></tr>
 					</table>
