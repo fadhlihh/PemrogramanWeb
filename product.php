@@ -18,12 +18,18 @@
 							<img src="image_product/sapu2.jpg" class="gambar-sub" height="71" width="71">
 							<img src="image_product/sapu3.jpg" class="gambar-sub" height="71" width="71">
 							<img src="image_product/sapu4.jpg" class="gambar-sub" height="71" width="71">
+						</td>
 					</tr>
 				</table>
 			</div>
-			<div class="col-sm-3 info">
+			<div class="col-sm-5 info">
 				<h3>Nama Produk</h3>
 				<h2>Rp.0</h2>
+				<table>
+					<tr><td width="100px">Penjual</td><td>:</td></tr>
+					<tr><td width="100px">Kontak</td><td>:</td></tr>
+				</table>
+				<p>Deskripsi barang dan tempat ada disini, tambahan kontak dapat disertakan disini</p>
 			</div>
 		</div>
 	</div>

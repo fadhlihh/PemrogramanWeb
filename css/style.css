@@ -2,6 +2,7 @@ html {
   	font-family: sans-serif;
   	height: 100%;
 }
+
 h1{
  	margin: .67em 0;
   	font-size: 3.75em;
@@ -140,37 +141,6 @@ nav a:hover{
   	display: block;
 }
 
-/*Card Panel Products*/
-.panel {
-  margin-bottom: 20px;
-  background-color: #292828;
-  border: 1px solid transparent;
-  border-radius: 4px;
-  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
-  box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
-}
-.panel-body {
-  padding: 15px;
-}
-.panel-heading {
-  padding: 10px 15px;
-  border-bottom: 1px solid transparent;
-  border-top-left-radius: 3px;
-  border-top-right-radius: 3px;
-}
-.panel-footer {
-  padding: 10px 15px;
-  background-color: #292828;
-  border-top: 1px solid #ddd;
-  border-bottom-right-radius: 3px;
-  border-bottom-left-radius: 3px;
-}
-.content{
-	margin-top: 40px;
-	min-height: 100%;
-	min-width: 80%;
-}
-
 /*For Sign In*/
 table{
 	margin-top: 40px;
@@ -241,6 +211,43 @@ input{
 	border-spacing: 0px 10px;
 }
 
+.content{
+  margin-top: 40px;
+  min-height: 100%;
+  min-width: 80%;
+}
+
+.content a{
+  color: #fff;
+  text-decoration: none;
+}
+
+/*Card Panel Products*/
+.panel {
+  margin-bottom: 20px;
+  background-color: #292828;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
+}
+.panel-body {
+  padding: 15px;
+}
+.panel-heading {
+  padding: 10px 15px;
+  border-bottom: 1px solid transparent;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+.panel-footer {
+  padding: 10px 15px;
+  background-color: #292828;
+  border-top: 1px solid #ddd;
+  border-bottom-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
 /***********
 PRODUCT PAGE
 ************/
@@ -261,6 +268,11 @@ PRODUCT PAGE
 .info{
 	margin-top: 20px;
 }
+.info table{
+  border-collapse: separate;
+  border-spacing: 5px 10px;
+}
+
 
 footer{
 	margin-top: 30px;
