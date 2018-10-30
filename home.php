@@ -19,7 +19,7 @@
 		<div class="content">
 			<div class="row">
 				<div class="col-sm-4">
-					<a href="product">
+					<a href="product.php">
 					<div class="panel panel-primary">
 			        <div class="panel-heading">Produk</div>
 			        <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" style="width:100%" alt="Image"></div>
@@ -28,7 +28,7 @@
 					</a>
 		    </div>
 		    <div class="col-sm-4">
-					<a href="product">
+					<a href="product.php">
 		      <div class="panel panel-primary">
 		        <div class="panel-heading">Produk</div>
 		        <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" style="width:100%" alt="Image"></div>
@@ -38,7 +38,7 @@
 		    </div>
 		    <div class="col-sm-4">
 		      <div class="panel panel-primary">
-						<a href="product">
+						<a href="product.php">
 		        <div class="panel-heading">Produk</div>
 		        <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" style="width:100%" alt="Image"></div>
 		        <div class="panel-footer">Buy please</div>

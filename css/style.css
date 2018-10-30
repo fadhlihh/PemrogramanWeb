@@ -1,7 +1,13 @@
+@font-face {
+  font-family: Barney; 
+  src: url('fonts/oliversbarney.ttf'); 
+} 
+
 html {
   	font-family: sans-serif;
   	height: 100%;
 }
+
 h1{
  	margin: .67em 0;
   	font-size: 3.75em;
@@ -140,37 +146,6 @@ nav a:hover{
   	display: block;
 }
 
-/*Card Panel Products*/
-.panel {
-  margin-bottom: 20px;
-  background-color: #292828;
-  border: 1px solid transparent;
-  border-radius: 4px;
-  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
-  box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
-}
-.panel-body {
-  padding: 15px;
-}
-.panel-heading {
-  padding: 10px 15px;
-  border-bottom: 1px solid transparent;
-  border-top-left-radius: 3px;
-  border-top-right-radius: 3px;
-}
-.panel-footer {
-  padding: 10px 15px;
-  background-color: #292828;
-  border-top: 1px solid #ddd;
-  border-bottom-right-radius: 3px;
-  border-bottom-left-radius: 3px;
-}
-.content{
-	margin-top: 40px;
-	min-height: 100%;
-	min-width: 80%;
-}
-
 /*For Sign In*/
 table{
 	margin-top: 40px;
@@ -241,6 +216,56 @@ input{
 	border-spacing: 0px 10px;
 }
 
+.tbl-signin tr td h1{
+	color:rgba(255, 77, 77, 1);
+	font-family: Barney, sans-serif;
+	font-weight: bold;
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.content{
+  margin-top: 40px;
+  min-height: 100%;
+  min-width: 80%;
+}
+
+.content a{
+  color: #fff;
+  text-decoration: none;
+}
+
+.daftar{
+	color:rgba(255, 77, 77, 1);
+	cursor: pointer;
+}
+
+/*Card Panel Products*/
+.panel {
+  margin-bottom: 20px;
+  background-color: #292828;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
+}
+.panel-body {
+  padding: 15px;
+}
+.panel-heading {
+  padding: 10px 15px;
+  border-bottom: 1px solid transparent;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+.panel-footer {
+  padding: 10px 15px;
+  background-color: #292828;
+  border-top: 1px solid #ddd;
+  border-bottom-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
 /***********
 PRODUCT PAGE
 ************/
@@ -260,7 +285,47 @@ PRODUCT PAGE
 /*Informasi Barang*/
 .info{
 	margin-top: 20px;
+	color: #000;
 }
+.info table{
+  border-collapse: separate;
+  border-spacing: 5px 10px;
+}
+
+/***********
+PAGE CONTACT
+************/
+.content h1{
+	color:#000;
+	font-weight: bolder;
+	font-size: 35px;
+	text-align: center;
+}
+.margin-right{
+	margin-right: 10px;
+	width: 80px;
+}
+.fa-envelope{
+	color:#fff;
+}
+.fa-line{
+	color:rgba(62, 179, 0, 1);
+}
+.fa-whatsapp{
+	color:rgba(74, 183, 16, 1);
+}
+.bigger-icon{
+	font-size: 50px
+}
+.label{
+	font-size: 25px;
+	color:black;
+	font-weight: bolder;
+}
+.contact{
+	text-align: center;
+}
+
 
 footer{
 	margin-top: 30px;
