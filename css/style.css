@@ -1,3 +1,8 @@
+@font-face {
+  font-family: Barney; 
+  src: url('fonts/oliversbarney.ttf'); 
+} 
+
 html {
   	font-family: sans-serif;
   	height: 100%;
@@ -211,6 +216,14 @@ input{
 	border-spacing: 0px 10px;
 }
 
+.tbl-signin tr td h1{
+	color:rgba(255, 77, 77, 1);
+	font-family: Barney, sans-serif;
+	font-weight: bold;
+	text-align: center;
+	margin-bottom: 20px;
+}
+
 .content{
   margin-top: 40px;
   min-height: 100%;
@@ -220,6 +233,11 @@ input{
 .content a{
   color: #fff;
   text-decoration: none;
+}
+
+.daftar{
+	color:rgba(255, 77, 77, 1);
+	cursor: pointer;
 }
 
 /*Card Panel Products*/
@@ -272,6 +290,40 @@ PRODUCT PAGE
 .info table{
   border-collapse: separate;
   border-spacing: 5px 10px;
+}
+
+/***********
+PAGE CONTACT
+************/
+.content h1{
+	color:#000;
+	font-weight: bolder;
+	font-size: 35px;
+	text-align: center;
+}
+.margin-right{
+	margin-right: 10px;
+	width: 80px;
+}
+.fa-envelope{
+	color:#fff;
+}
+.fa-line{
+	color:rgba(62, 179, 0, 1);
+}
+.fa-whatsapp{
+	color:rgba(74, 183, 16, 1);
+}
+.bigger-icon{
+	font-size: 50px
+}
+.label{
+	font-size: 25px;
+	color:black;
+	font-weight: bolder;
+}
+.contact{
+	text-align: center;
 }
 
 
