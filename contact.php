@@ -59,6 +59,7 @@
 				      	</div>
 							</a>
 				    </div>
+						<span class="fas fa-envelope margin-right bigger-icon">padjadjaranonlineshop@gmail.com</span>
 					</div>
 				</div>
 			</center>
