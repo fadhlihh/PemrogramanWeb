@@ -26,6 +26,7 @@ body{
 	color: #ffffff;
 	margin: 0;
 	height: 100%;
+	width: 100%;
 }
 .row{
 	margin-left: 20px;
@@ -71,12 +72,12 @@ body{
 
 /*Navbar*/
 .navbar-right{
-	float: right;
+  margin-left: 1150px;
 }
 .navbar-right ul li{
 	display: inline-block;
+  padding: 14px 16px;
 	list-style: none;
-	margin-right: 20px;
 }
 .navbar-right ul li:hover{
 	cursor: pointer;
@@ -87,7 +88,7 @@ nav {
   	background-color: #292828;
   	font-family: Arial;
   	color:#9d9d9d;
- 	top: 0px;
+ 	  top: 0px;
   	position: sticky;
   	z-index: 4;
   	min-height: 50px;
@@ -176,9 +177,10 @@ input[type="button"]{
 	background-color: #fefefe;
 	color:#000;
     margin: 15% auto;
+	margin-top: 100px;
     padding: 20px;
     border: 1px solid #888;
-    width: 40%;
+    width: 500px;
 }
 .close{
     color: #aaa;
@@ -285,6 +287,7 @@ PRODUCT PAGE
 /*Informasi Barang*/
 .info{
 	margin-top: 20px;
+	margin-left: 90px;
 	color: #000;
 }
 .info table{

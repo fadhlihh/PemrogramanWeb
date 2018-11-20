@@ -29,11 +29,11 @@
 		    </div>
 		    <div class="col-sm-4">
 					<a href="product.php">
-		      <div class="panel panel-primary">
-		        <div class="panel-heading">Produk</div>
-		        <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" style="width:100%" alt="Image"></div>
-		        <div class="panel-footer">Buy that</div>
-		      </div>
+	      	<div class="panel panel-primary">
+	        	<div class="panel-heading">Produk</div>
+	        	<div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" style="width:100%" alt="Image"></div>
+	        	<div class="panel-footer">Buy that</div>
+	      	</div>
 					</a>
 		    </div>
 		    <div class="col-sm-4">

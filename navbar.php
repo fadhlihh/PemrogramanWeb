@@ -15,13 +15,13 @@
 		    	</div>
 		  	</div>
 		  	<a href="contact.php">Contact</a>
+			<div class="navbar-right">
+				<ul>
+					<li id="signin">Sign in</li>
+			  		<li><span class="fas fa-search"></span></li>
+				</ul>
+			</div> 
 		</div>
-		<div class="navbar-right">
-			<ul>
-				<li id="signin">Sign in</li>
-		  		<li><span class="fas fa-search"></span></li>
-			</ul>
-		</div> 
 	</nav>
 	<div id="modal" class="modal-signin">
 		<div class="modal-signin-content">
