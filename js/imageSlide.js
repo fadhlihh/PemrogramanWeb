@@ -1,8 +1,8 @@
 var images = [
-"image_product/sapu1.jpg",
-"image_product/sapu2.jpg",
-"image_product/sapu3.jpg",
-"image_product/sapu4.jpg"
+"localhost/ProjectWeb/image_product/sapu1.jpg",
+"localhost/ProjectWeb/image_product/sapu2.jpg",
+"localhost/ProjectWeb/image_product/sapu3.jpg",
+"localhost/ProjectWeb/image_product/sapu4.jpg"
 ];
 
 var image = document.getElementsByClassName('gambar-main')[0];
