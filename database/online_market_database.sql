@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 20 Okt 2018 pada 14.28
--- Versi server: 10.1.36-MariaDB
--- Versi PHP: 7.2.10
+-- Generation Time: Nov 25, 2018 at 06:16 AM
+-- Server version: 10.1.36-MariaDB
+-- PHP Version: 5.6.38
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -25,7 +25,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `barang`
+-- Table structure for table `barang`
 --
 
 CREATE TABLE `barang` (
@@ -34,6 +34,9 @@ CREATE TABLE `barang` (
   `id_kategori` varchar(100) COLLATE utf8_bin NOT NULL,
   `nama_barang` varchar(50) COLLATE utf8_bin NOT NULL,
   `foto_barang` blob NOT NULL,
+  `foto_1` blob NOT NULL,
+  `foto_2` blob NOT NULL,
+  `foto_3` blob NOT NULL,
   `deskripsi` varchar(500) COLLATE utf8_bin NOT NULL,
   `harga` double NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
@@ -41,7 +44,7 @@ CREATE TABLE `barang` (
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `kategori`
+-- Table structure for table `kategori`
 --
 
 CREATE TABLE `kategori` (
@@ -52,7 +55,7 @@ CREATE TABLE `kategori` (
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `user`
+-- Table structure for table `user`
 --
 
 CREATE TABLE `user` (
@@ -74,7 +77,7 @@ CREATE TABLE `user` (
 --
 
 --
--- Indeks untuk tabel `barang`
+-- Indexes for table `barang`
 --
 ALTER TABLE `barang`
   ADD PRIMARY KEY (`id_barang`(100)),
@@ -82,25 +85,25 @@ ALTER TABLE `barang`
   ADD KEY `npm` (`npm`);
 
 --
--- Indeks untuk tabel `kategori`
+-- Indexes for table `kategori`
 --
 ALTER TABLE `kategori`
   ADD PRIMARY KEY (`id_kategori`),
   ADD UNIQUE KEY `nama_kategori` (`nama_kategori`);
 
 --
--- Indeks untuk tabel `user`
+-- Indexes for table `user`
 --
 ALTER TABLE `user`
   ADD PRIMARY KEY (`NPM`),
   ADD UNIQUE KEY `Username` (`Username`);
 
 --
--- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
+-- Constraints for dumped tables
 --
 
 --
--- Ketidakleluasaan untuk tabel `barang`
+-- Constraints for table `barang`
 --
 ALTER TABLE `barang`
   ADD CONSTRAINT `kategori` FOREIGN KEY (`id_kategori`) REFERENCES `kategori` (`id_kategori`),
