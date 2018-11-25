@@ -28,6 +28,11 @@ body{
 	height: 100%;
 	width: 100%;
 }
+
+.back-red{
+  background-color: red;
+}
+
 .row{
 	margin-left: 20px;
 	margin-right: 10px;
@@ -61,6 +66,82 @@ body{
   	margin-left: auto;
 }
 
+/***********
+PAGE ACCOUNT
+************/
+.left-account{
+  margin-left: 60px;
+}
+.user-pic{
+  width: 250px;
+  height: 250px;
+  max-width: 250px;
+  max-height: 250px;
+  border-radius: 250px;
+  object-fit: cover;
+}
+.user-uname{
+  font-size: 22px;
+  font-weight: bolder;
+}
+.light{
+  font-weight: normal;
+  font-size: 18px;
+}
+.mar-1{
+  padding-top: 10px;
+}
+.mar-2{
+  padding-top: 20px;
+}
+.difcolor{
+  color:#525252;
+}
+.btn-user{
+  background-color: #292828;
+  width: 100px;
+  font-weight: bolder;
+}
+.btn-user:hover{
+  background-color: #343232;
+}
+.right-account{
+  vertical-align: top;
+  margin-left: 40px;
+}
+.header-account{
+  font-size: 28px;
+  font-weight: bolder;
+}
+hr{
+  border: solid 1px #292828;
+}
+.align-right{
+  text-align: right;
+}
+.space-left{
+  padding-left: 50px;
+}
+.btn-save{
+  margin-left: 10px;
+  width: 100px;
+  font-weight: bolder;
+  color:#fff;
+  cursor: pointer;
+  border-radius: 5px;
+  border:none;
+}
+.btn-save:hover{
+  background-color:rgba(255, 77, 77, 1);
+}
+.btn-edit{
+  display: none;
+}
+
+
+/******
+BERANDA
+*******/
 /*jumbotron*/
 .jumbotron .container p{
 	font-size: 20px;
@@ -94,6 +175,7 @@ nav {
   	min-height: 50px;
   	max-height: 50px;
   	cursor: context-menu;
+    margin-top: -18px; 
 }
 nav a{
   	float: left;
@@ -149,7 +231,7 @@ nav a:hover{
 
 /*For Sign In*/
 table{
-	margin-top: 40px;
+	margin-top: 20px;
 	margin-left: 5px;
 	margin-right: 5px;
 	color:black;
@@ -157,10 +239,10 @@ table{
 }
 input[type="button"]{
 	color:white;
-	background-color: red;
 	border: none;
 	padding: 10px;
 	border-radius: 5px;
+  cursor: pointer;
 }
 .modal-signin{
 	display: none;
@@ -177,7 +259,7 @@ input[type="button"]{
 	background-color: #fefefe;
 	color:#000;
     margin: 15% auto;
-	margin-top: 100px;
+	margin-top: 50px;
     padding: 20px;
     border: 1px solid #888;
     width: 500px;
@@ -213,31 +295,31 @@ input{
 	border-radius: 3px;
 	border: 1px  solid rgba(158, 158, 158, 1); 
 }
-.tbl-signin{
+.tbl-signin,.tbl-signup{
 	border-collapse: separate;
 	border-spacing: 0px 10px;
 }
-
-.tbl-signin tr td h1{
+.tbl-signup{
+  display: none;
+  margin-left: 20px;
+}
+.tbl-signin tr td h1,.tbl-signup tr td h1{
 	color:rgba(255, 77, 77, 1);
 	font-family: Barney, sans-serif;
 	font-weight: bold;
 	text-align: center;
 	margin-bottom: 20px;
 }
-
 .content{
-  margin-top: 40px;
+  margin-top: 20px;
   min-height: 100%;
   min-width: 80%;
 }
-
 .content a{
   color: #fff;
   text-decoration: none;
 }
-
-.daftar{
+#daftar,#masuk{
 	color:rgba(255, 77, 77, 1);
 	cursor: pointer;
 }
@@ -328,7 +410,6 @@ PAGE CONTACT
 .contact{
 	text-align: center;
 }
-
 
 footer{
 	margin-top: 30px;
