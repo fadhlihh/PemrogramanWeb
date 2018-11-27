@@ -36,7 +36,7 @@
 						<tr><td style="font-size: 13px; color:rgba(158, 158, 158, 1);">Belum punya akun POM? <span id="daftar">daftar</span></td></tr>
 					</table>
 				</form>
-				<form method="post">
+				<form method="post" action="<?php echo base_url();?>index.php/user">
 					<table class="tbl-signup">
 						<tr><td><h1>Sign Up</h1></td></tr>
 						<tr><td><input type="text" name="nama_lengkap" placeholder="Nama Lengkap"></td></tr>

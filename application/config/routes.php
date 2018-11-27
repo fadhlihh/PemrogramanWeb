@@ -55,3 +55,4 @@ $route['translate_uri_dashes'] = FALSE;
 $route['home'] = 'home_controller';
 $route['product'] = 'home_controller/product';
 $route['contact'] = 'home_controller/contact';
+$route['user'] = 'user_controller';
