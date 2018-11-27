@@ -7,6 +7,10 @@
 			$this->load->model('user_model');
 		}
 		public function index(){
+			
+		}
+
+		public function signup(){
 			$data = array(
 				'NPM' => $this->input->post('npm'), 
 				'Username' => $this->input->post('username'),
@@ -17,6 +21,17 @@
 			);
 			$this->user_model->insert_signup($data);
 			$this->load->view('home');
+		}
+
+		public function signin(){
+			$iden = $this->input->post('username');
+			$pass = $this->input->post('password');
+			if($this->user_model->check_signin($pass,$iden)){
+				$this->load->view('home');
+			}else{
+				echo "<script type='text/javascript'>alert('Password/username salah');</script>";
+				$this->load->view('home');
+			}
 		}
 	}
 ?>

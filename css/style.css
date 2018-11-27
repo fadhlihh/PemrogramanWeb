@@ -323,6 +323,10 @@ input{
 	color:rgba(255, 77, 77, 1);
 	cursor: pointer;
 }
+.gagal{
+  display: none;
+  color:red;
+}
 
 /*Card Panel Products*/
 .panel {

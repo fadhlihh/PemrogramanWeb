@@ -8,5 +8,17 @@
 		public function insert_signup($data){
 			$this->db->insert('user',$data);
 		}
+
+		public function check_signin($pass,$iden){
+			$this->db->from('user');
+			$this->db->where('Username =', $iden);
+			$this->db->where('password =', $pass);
+			$result = $this->db->get();
+			if($result->num_rows() > 0){
+				return TRUE;
+			}else{
+				return FALSE;
+			}
+		}
 	}
 ?>

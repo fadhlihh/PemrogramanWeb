@@ -56,3 +56,5 @@ $route['home'] = 'home_controller';
 $route['product'] = 'home_controller/product';
 $route['contact'] = 'home_controller/contact';
 $route['user'] = 'user_controller';
+$route['user-signup'] = 'user_controller/signup';
+$route['user-signin'] = 'user_controller/signin';
