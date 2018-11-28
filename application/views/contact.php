@@ -9,7 +9,7 @@
 		<title>Padjadjaran Online Market - About Us</title>
 	</head>
 	<body>
-		<?php require("navbar.php") ?>
+		<?php require("navbar.php"); ?>
 		<div class="content">
 			<h1>CONTACT US</h1>
 			<br><br><br>

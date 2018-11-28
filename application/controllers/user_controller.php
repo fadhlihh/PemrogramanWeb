@@ -15,6 +15,7 @@
 				'NPM' => $this->input->post('npm'), 
 				'Username' => $this->input->post('username'),
 				'Nama_Lengkap' => $this->input->post('nama_lengkap'),
+				'email' => $this->input->post('email'),
 				'password' => $this->input->post('password'),
 				'no_hp' => $this->input->post('nohp'),
 				'tanggal_Bergabung' => date('Y-m-d H:i:s')
@@ -33,5 +34,12 @@
 				$this->load->view('home');
 			}
 		}
+
+		public function showuser(){
+			$result['data']=$this->user_model->show_account();
+			if($result['data'] == false )
+            	$result['data'] = array();            
+			$this->load->view('account',$result);
+    	}
 	}
 ?>

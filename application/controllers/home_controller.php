@@ -6,6 +6,10 @@
 			$this->load->view('home');
 		}
 
+		public function account(){
+			$this->load->view('account');
+		}
+		
 		public function product(){
 			$this->load->view('product');
 		}

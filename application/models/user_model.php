@@ -20,5 +20,10 @@
 				return FALSE;
 			}
 		}
+
+		public function show_account(){
+			$result=$this->db->query("SELECT * FROM user");
+			return $hasil;
+		}
 	}
 ?>
