@@ -98,6 +98,10 @@ PAGE ACCOUNT
   color:#525252;
 }
 .btn-user{
+  color:#fff;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
   background-color: #292828;
   width: 100px;
   font-weight: bolder;
@@ -156,7 +160,7 @@ BERANDA
   margin-left: 1150px;
 }
 .navbar-right ul li{
-	display: inline-block;
+	display: inline;
   padding: 14px 16px;
 	list-style: none;
 }

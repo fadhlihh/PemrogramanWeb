@@ -17,7 +17,11 @@
 		  	<a href="<?php echo base_url();?>index.php/contact">Contact</a>
 			<div class="navbar-right">
 				<ul>
+					<?php if($this->session->userdata('status')){ ?>
+					<li><a href="<?php echo base_url();?>index.php/account"><?php echo $this->session->userdata('name'); ?></a></li>
+					<?php }else{ ?>
 					<li id="signin">Sign in</li>
+					<?php } ?>
 			  		<li><span class="fas fa-search"></span></li>
 				</ul>
 			</div> 

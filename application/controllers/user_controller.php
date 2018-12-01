@@ -25,9 +25,15 @@
 		}
 
 		public function signin(){
+			$this->load->library('session');
 			$iden = $this->input->post('username');
 			$pass = $this->input->post('password');
 			if($this->user_model->check_signin($pass,$iden)){
+				$signin_status = array(
+					'name' => $iden,
+					'status' => TRUE
+				);
+				$this->session->set_userdata($signin_status);
 				$this->load->view('home');
 			}else{
 				echo "<script type='text/javascript'>alert('Password/username salah');</script>";
@@ -40,6 +46,13 @@
 			if($result['data'] == false )
             	$result['data'] = array();            
 			$this->load->view('account',$result);
+    	}
+
+    	public function logout(){
+    		$this->load->library('session');
+    		$this->session->unset_userdata('name');
+    		$this->session->unset_userdata('status');
+    		$this->load->view('home');
     	}
 	}
 ?>
