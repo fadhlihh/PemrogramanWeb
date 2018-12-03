@@ -42,9 +42,8 @@
 		}
 
 		public function showuser(){
-			$result['data']=$this->user_model->show_account();
-			if($result['data'] == false )
-            	$result['data'] = array();            
+			$this->load->library('session');
+			$result['user'] = $this->user_model->show_account($this->session->userdata('name'));
 			$this->load->view('account',$result);
     	}
 

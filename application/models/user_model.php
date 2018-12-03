@@ -21,9 +21,9 @@
 			}
 		}
 
-		public function show_account(){
-			$result=$this->db->query("SELECT * FROM user");
-			return $hasil;
+		public function show_account($iden){
+			$result=$this->db->query("SELECT * FROM user WHERE Username = '".$iden."'");
+			return $result->result_array();
 		}
 	}
 ?>

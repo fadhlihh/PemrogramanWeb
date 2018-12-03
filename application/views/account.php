@@ -15,11 +15,12 @@
 				<tr>
 					<td>
 						<table class="left-account" width="250px">
-							<tr><td><img src="image_account/default-avatar.png" class="user-pic"></td></tr>
-							<tr align="center"><td><font class="user-uname"><?php echo $Username?></font></td></tr>
-							<tr align="center"><td class="mar-1"><font class="light"><?php echo $fakultas?></font></td></tr>
-							<tr align="center"><td class="mar-2"><font class="difcolor"><?php echo $login_terakhir?></font></td></tr>
-							<tr align="center"><td><font class="difcolor"><?php echo $tanggal_Bergabung?></font></td></tr>
+							<tr><td><img src="<?php echo base_url();?>image_account/default-avatar.png" class="user-pic"></td></tr>
+							<?php foreach($user as $usr){?>
+								<tr align="center"><td><font class="user-uname"><?php echo $usr['Username']; ?></font></td></tr>
+								<tr align="center"><td class="mar-1"><font class="light"><?php echo $usr['fakultas']; ?></font></td></tr>
+								<tr align="center"><td class="mar-2"><font class="difcolor"><?php echo $usr['login_Terakhir']; ?></font></td></tr>
+								<tr align="center"><td><font class="difcolor"><?php echo $usr['tanggal_Bergabung']; ?></font></td></tr>
 							<tr align="center"><td class="mar-2"><button class="btn-user">Jual Barang</button></td></tr>
 							<tr align="center"><td class="mar-1"><a href="<?php echo base_url();?>index.php/user-logout"><button class="btn-user">Log Out</button></a></td></tr>
 						</table>
@@ -29,13 +30,16 @@
 						<table class="right-account">
 							<tr><td><font class="header-account">Informasi Akun</font></td><td class="align-right space-left"><input type="button" name="edit" value="Edit" class="btn-user btn-ubah" ></td></tr>
 							<tr><td colspan="2"><hr></td></tr>
-								<tr><td class="mar-1"><?php echo $Nama_Lengkap?></td><td class="mar-1"><input type="text" name="nama_lengkap" value="Nama User" disabled></td></tr>
-								<tr><td class="mar-1"><?php echo $Username?></td><td class="mar-1"><input type="text" name="username" value="Username" disabled></td></tr>
-								<tr><td class="mar-1"><?php echo $Username?></td><td class="mar-1"><input type="Password" name="password" disabled></td></tr>
-								<tr><td class="mar-1"><?php echo $email?></td><td class="mar-1"><input type="email" name="email" value="user@mail.com" disabled></td></tr>
-								<tr><td class="mar-1"><?php echo $no_hp?></td><td class="mar-1"><input type="text" name="hp" value="123" disabled></td></tr>
-								<tr><td class="mar-1"><?php echo $fakultas?></td><td class="mar-1"><input type="text" name="fakultas" value="Fakultas User" disabled></td></tr>
-								<tr><td class="mar-1"><?php echo $alamat?></td><td class="mar-1"><input type="text" name="alamat" value="Alamat User" disabled></td></tr>
+							<div id="formEdit">
+								<tr><td class="mar-1">Nama Lengkap</td><td class="mar-1"><input type="text" name="nama_lengkap" class="formEdit" value="<?php echo $usr['Nama_Lengkap']; ?>" disabled></td></tr>
+								<tr><td class="mar-1">Username</td><td class="mar-1"><input type="text" name="username" value="<?php echo $usr['Username']; ?>" disabled></td></tr>
+								<tr><td class="mar-1">Password</td><td class="mar-1"><input type="Password" name="password" disabled></td></tr>
+								<tr><td class="mar-1">E-mail</td><td class="mar-1"><input type="email" name="email" value="<?php echo $usr['email']; ?>" disabled></td></tr>
+								<tr><td class="mar-1">No Hp</td><td class="mar-1"><input type="text" name="hp" value="<?php echo $usr['no_hp']; ?>" disabled></td></tr>
+								<tr><td class="mar-1">Fakultas</td><td class="mar-1"><input type="text" name="fakultas" value="<?php echo $usr['fakultas']; ?>" disabled></td></tr>
+								<tr><td class="mar-1">Alamat</td><td class="mar-1"><input type="text" name="alamat" value="<?php echo $usr['alamat']; ?>" disabled></td></tr>
+							</div>
+							<?php } ?>
 								<tr><td colspan="2" class="align-right mar-2"><input type="button" name="cancel" value="Kembali" class="btn-user btn-edit"><input type="submit" name="save-edit" value="Simpan" class="back-red btn-save btn-edit"></td></tr>
 						</table>
 						</form>
@@ -43,7 +47,7 @@
 				</tr>
 			</table>
 		</div>
-		<script type="text/javascript" src="js/editAkun.js"></script>
+		<script type="text/javascript" src="<?php echo base_url();?>js/editAkun.js"></script>
 		<?php require("footer.php");?>
 	</body>
 </html>
