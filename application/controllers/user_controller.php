@@ -5,6 +5,7 @@
 		public function __construct(){
 			parent::__construct();
 			$this->load->model('user_model');
+			$this->load->model('product_model');
 		}
 		public function index(){
 			
@@ -28,16 +29,18 @@
 			$this->load->library('session');
 			$iden = $this->input->post('username');
 			$pass = $this->input->post('password');
+			$result['kategori'] = $this->product_model->loadAllCategory();
+			
 			if($this->user_model->check_signin($pass,$iden)){
 				$signin_status = array(
 					'name' => $iden,
 					'status' => TRUE
 				);
 				$this->session->set_userdata($signin_status);
-				$this->load->view('home');
+				$this->load->view('home',$result);
 			}else{
 				echo "<script type='text/javascript'>alert('Password/username salah');</script>";
-				$this->load->view('home');
+				$this->load->view('home',$result);
 			}
 		}
 
@@ -48,10 +51,16 @@
     	}
 
     	public function logout(){
+    		$result['kategori'] = $this->product_model->loadAllCategory();
     		$this->load->library('session');
     		$this->session->unset_userdata('name');
     		$this->session->unset_userdata('status');
-    		$this->load->view('home');
+    		$this->load->view('home',$result);
+    	}
+
+    	public function jualBarang(){
+    		$result['kategori'] = $this->product_model->loadAllCategory();
+    		$this->load->view('jual_barang',$result);
     	}
 	}
 ?>

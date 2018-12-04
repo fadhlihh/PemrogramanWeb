@@ -9,9 +9,9 @@
 		      		<i class="fa fa-caret-down"></i></span>
 		    	</button>
 		    	<div class="dropdown-content">
-			      	<a href="#">Clothing</a>
-			     	<a href="#">Electronic</a>
-			      	<a href="#">Food</a>
+		    		<?php foreach($kategori as $kat){ ?>
+			      	<a href="#"><?php echo $kat['nama_kategori']; ?></a>
+			      	<?php } ?>
 		    	</div>
 		  	</div>
 		  	<a href="<?php echo base_url();?>index.php/contact">Contact</a>
