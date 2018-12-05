@@ -5,7 +5,7 @@
 		<div class="navbar-left">
 			<a href="<?php echo base_url();?>index.php/home">Beranda</a>
 			<div class="dropdown">
-		    	<button class="dropbtn"><span>Kategori 
+		    	<button class="dropbtn"><span>Kategori
 		      		<i class="fa fa-caret-down"></i></span>
 		    	</button>
 		    	<div class="dropdown-content">
@@ -24,7 +24,7 @@
 					<?php } ?>
 			  		<a href="#"><li><span class="fas fa-search"></span></li></a>
 				</ul>
-			</div> 
+			</div>
 		</div>
 	</nav>
 	<div id="modal" class="modal-signin">
@@ -58,6 +58,6 @@
 		</div>
 	</div>
 	<script type="text/javascript" src="<?php echo base_url();?>js/modalSignIn.js"></script>
-	<br>
+	<br><br><br>
 </body>
 </html>
