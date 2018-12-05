@@ -59,6 +59,20 @@
     		$this->load->view('home',$result);
     	}
 
+    	public function update_user(){
+    		$result['kategori'] = $this->product_model->loadAllCategory();
+    		$data = array( 
+				'Username' => $this->input->post('username'),
+				'Nama_Lengkap' => $this->input->post('nama_lengkap'),
+				'email' => $this->input->post('email'),
+				'password' => $this->input->post('password'),
+				'no_hp' => $this->input->post('nohp'),
+				'fakultas' => $this->input->post('fakultas'),
+				'alamat' => $this->input->post('alamat')
+			);
+			$hasil['user'] = $this->user_model->show_account($this->session->userdata('name'));
+    	}
+
     	public function jualBarang(){
     		$result['kategori'] = $this->product_model->loadAllCategory();
     		$this->load->view('jual_barang',$result);
