@@ -22,14 +22,20 @@
 				------>
 				<div class="content">
 					<div class="row">
+						<div class="col-sm-12">
+							<span class="fas fa-envelope smaller-icon">padjadjaranonlineshop@gmail.com</span>
+						</div>
+						<div class="col-sm-12">
+							<br><br>
+						</div>
 						<div class="col-sm-4">
 							<a href="#">
 							<div class="panel panel-primary">
 					        <div class="panel-heading"><img src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png" style="width:100%" alt="Image"></div>
-									<div class="panel-body">  <span class="name">Fadhli Hibatul</span><br/>
-										<span class="fab fa-line margin-right bigger-icon" data-toggle="tooltip" title="fadhlihibatul"></span>
+									<div class="panel-body"><span class="name">Fadhli Hibatul</span><br/>
+										<span class="fab fa-line smaller-icon" data-toggle="tooltip" title="fadhlihibatul"></span>
 										<span> <span>fadhlihibatul</span><br/></span>
-										<span class="fab fa-whatsapp margin-right bigger-icon" data-toggle="tooltip" title="0895422509529"></span>
+										<span class="fab fa-whatsapp smaller-icon" data-toggle="tooltip" title="0895422509529"></span>
 										<span> <span>0895422509529</span><br/></span>
 									</div>
 				      	</div>
@@ -40,9 +46,9 @@
 							<div class="panel panel-primary">
 					        <div class="panel-heading"><img src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png" style="width:100%" alt="Image"></div>
 									<div class="panel-body">  <span class="name">Diemas Aksya</span><br/>
-										<span class="fab fa-line margin-right bigger-icon" data-toggle="tooltip" title="fadhlihibatul"></span>
+										<span class="fab fa-line smaller-icon" data-toggle="tooltip" title="fadhlihibatul"></span>
 										<span> <span>diemasaksya</span><br/></span>
-										<span class="fab fa-whatsapp margin-right bigger-icon" data-toggle="tooltip" title="0895422509529"></span>
+										<span class="fab fa-whatsapp smaller-icon" data-toggle="tooltip" title="0895422509529"></span>
 										<span> <span>085793344993</span><br/></span>
 									</div>
 				      	</div>
@@ -53,15 +59,14 @@
 							<div class="panel panel-primary">
 					        <div class="panel-heading"><img src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png" style="width:100%" alt="Image"></div>
 									<div class="panel-body">  <span class="name">Muhammad Afif</span><br/>
-										<span class="fab fa-line margin-right bigger-icon" data-toggle="tooltip" title="fadhlihibatul"></span>
+										<span class="fab fa-line smaller-icon" data-toggle="tooltip" title="fadhlihibatul"></span>
 										<span> <span>fifoblivion</span><br/></span>
-										<span class="fab fa-whatsapp margin-right bigger-icon" data-toggle="tooltip" title="0895422509529"></span>
+										<span class="fab fa-whatsapp smaller-icon" data-toggle="tooltip" title="0895422509529"></span>
 										<span> <span>082256711218</span><br/></span>
 									</div>
 				      	</div>
 							</a>
 				    </div>
-						<span class="fas fa-envelope margin-right bigger-icon">padjadjaranonlineshop@gmail.com</span>
 					</div>
 				</div>
 			</center>

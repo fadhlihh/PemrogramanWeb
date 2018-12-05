@@ -1,7 +1,7 @@
 @font-face {
-  font-family: Barney; 
-  src: url('fonts/oliversbarney.ttf'); 
-} 
+  font-family: Barney;
+  src: url('fonts/oliversbarney.ttf');
+}
 
 html {
   	font-family: sans-serif;
@@ -64,6 +64,7 @@ body{
   	padding-left: 15px;
   	margin-right: auto;
   	margin-left: auto;
+    margin-bottom: 0px;
 }
 
 /***************
@@ -163,7 +164,7 @@ BERANDA
 }
 .jumbotron{
 	padding: 30px;
-	margin-bottom: 15px;
+	margin-bottom: 0px;
 }
 
 /*Navbar*/
@@ -191,7 +192,7 @@ nav {
   	max-height: 50px;
   	cursor: context-menu;
     margin-top: -18px;
-    width: 100%; 
+    width: 100%;
 }
 nav a{
   	float: left;
@@ -209,7 +210,7 @@ nav a:hover{
   	overflow: hidden;
 }
 .dropdown .dropbtn {
-  	font-size: 16px; 
+  	font-size: 16px;
   	border: none;
   	outline: none;
   	color: #9d9d9d;
@@ -309,7 +310,7 @@ input,select{
 	padding: 10px;
 	height: 40px;
 	border-radius: 3px;
-	border: 1px  solid rgba(158, 158, 158, 1); 
+	border: 1px  solid rgba(158, 158, 158, 1);
 }
 .tbl-signin,.tbl-signup{
 	border-collapse: separate;
@@ -421,6 +422,9 @@ PAGE CONTACT
 }
 .bigger-icon{
 	font-size: 50px
+}
+.smaller-icon{
+	font-size: 30px
 }
 .label{
 	font-size: 25px;

@@ -16,7 +16,7 @@
 		  </div>
 		</div>
 		<?php require("navbar.php");?>
-		<div class="content">
+		<div class="container">
 			<div class="row">
 				<div class="col-sm-4">
 					<a href="<?php echo base_url();?>index.php/product">
@@ -46,8 +46,10 @@
 					</a>
 		    </div>
 				</div>
+				<span class="row">
+					<span class="col-sm-12"></span>
+				</span>
 			</div>
-		</div>
 		<?php require("footer.php"); ?>
 	</body>
 </html>
