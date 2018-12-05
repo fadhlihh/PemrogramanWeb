@@ -168,7 +168,7 @@ BERANDA
 
 /*Navbar*/
 .navbar-right{
-  margin-left: 1150px;
+  margin-left: 1100px;
 }
 .navbar-right ul li{
 	display: inline;
@@ -190,7 +190,8 @@ nav {
   	min-height: 50px;
   	max-height: 50px;
   	cursor: context-menu;
-    margin-top: -18px; 
+    margin-top: -18px;
+    width: 100%; 
 }
 nav a{
   	float: left;

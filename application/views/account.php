@@ -28,16 +28,16 @@
 					<td>
 						<form method="post" name="ubahAkun">
 						<table class="right-account">
-							<tr><td><font class="header-account">Informasi Akun</font></td><td class="align-right space-left"><input type="button" name="edit" value="Edit" class="btn-user btn-ubah" ></td></tr>
+							<tr><td><font class="header-account">Informasi Akun</font></td><td class="align-right space-left"><input type="button" name="edit" value="Edit" class="btn-user"  id="btn-ubah"></td></tr>
 							<tr><td colspan="2"><hr></td></tr>
 							<div id="formEdit">
-								<tr><td class="mar-1">Nama Lengkap</td><td class="mar-1"><input type="text" name="nama_lengkap" class="formEdit" value="<?php echo $usr['Nama_Lengkap']; ?>" disabled></td></tr>
-								<tr><td class="mar-1">Username</td><td class="mar-1"><input type="text" name="username" value="<?php echo $usr['Username']; ?>" disabled></td></tr>
-								<tr><td class="mar-1">Password</td><td class="mar-1"><input type="Password" name="password" disabled></td></tr>
-								<tr><td class="mar-1">E-mail</td><td class="mar-1"><input type="email" name="email" value="<?php echo $usr['email']; ?>" disabled></td></tr>
-								<tr><td class="mar-1">No Hp</td><td class="mar-1"><input type="text" name="hp" value="<?php echo $usr['no_hp']; ?>" disabled></td></tr>
-								<tr><td class="mar-1">Fakultas</td><td class="mar-1"><input type="text" name="fakultas" value="<?php echo $usr['fakultas']; ?>" disabled></td></tr>
-								<tr><td class="mar-1">Alamat</td><td class="mar-1"><input type="text" name="alamat" value="<?php echo $usr['alamat']; ?>" disabled></td></tr>
+								<tr><td class="mar-1">Nama Lengkap</td><td class="mar-1"><input type="text" name="nama_lengkap" value="<?php echo $usr['Nama_Lengkap']; ?>" disabled class="inputUbah"></td></tr>
+								<tr><td class="mar-1">Username</td><td class="mar-1"><input type="text" name="username" value="<?php echo $usr['Username']; ?>" disabled class="inputUbah"></td></tr>
+								<tr><td class="mar-1">Password</td><td class="mar-1"><input type="Password" name="password" disabled class="inputUbah"></td></tr>
+								<tr><td class="mar-1">E-mail</td><td class="mar-1"><input type="email" name="email" value="<?php echo $usr['email']; ?>" disabled class="inputUbah"></td></tr>
+								<tr><td class="mar-1">No Hp</td><td class="mar-1"><input type="text" name="hp" value="<?php echo $usr['no_hp']; ?>" disabled class="inputUbah"></td></tr>
+								<tr><td class="mar-1">Fakultas</td><td class="mar-1"><input type="text" name="fakultas" value="<?php echo $usr['fakultas']; ?>" disabled class="inputUbah"></td></tr>
+								<tr><td class="mar-1">Alamat</td><td class="mar-1"><input type="text" name="alamat" value="<?php echo $usr['alamat']; ?>" disabled class="inputUbah"></td></tr>
 							</div>
 							<?php } ?>
 								<tr><td colspan="2" class="align-right mar-2"><input type="button" name="cancel" value="Kembali" class="btn-user btn-edit"><input type="submit" name="save-edit" value="Simpan" class="back-red btn-save btn-edit"></td></tr>
@@ -47,7 +47,32 @@
 				</tr>
 			</table>
 		</div>
-		<script type="text/javascript" src="<?php echo base_url();?>js/editAkun.js"></script>
+		<script type="text/javascript">
+			var ubah = document.querySelector('#btn-ubah');
+
+			ubah.onclick = function() {
+				ubah.style.display = "none";
+				document.getElementsByClassName('btn-edit')[0].style.display = "inline-block";
+				document.getElementsByClassName('btn-edit')[1].style.display = "inline-block";
+				var i = 0;
+				while(i < document.getElementsByClassName('inputUbah').length){
+					document.getElementsByClassName('inputUbah')[i].removeAttribute("disabled");
+					i++;
+				}
+			}
+
+			document.getElementsByClassName('btn-edit')[1].onclick = function() {
+				ubah.style.display = "inline-block";
+				document.getElementsByClassName('btn-edit')[0].style.display = "none";
+				document.getElementsByClassName('btn-edit')[1].style.display = "none";
+			}
+
+			document.getElementsByClassName('btn-edit')[0].onclick = function() {
+				ubah.style.display = "inline-block";
+				document.getElementsByClassName('btn-edit')[0].style.display = "none";
+				document.getElementsByClassName('btn-edit')[1].style.display = "none";
+			}
+		</script>
 		<?php require("footer.php");?>
 	</body>
 </html>

@@ -20,9 +20,9 @@
 					<?php if($this->session->userdata('status')){ ?>
 					<li><a href="<?php echo base_url();?>index.php/user-show"><?php echo $this->session->userdata('name'); ?></a></li>
 					<?php }else{ ?>
-					<li id="signin">Sign in</li>
+					<a href="#"><li id="signin">Sign in</li></a>
 					<?php } ?>
-			  		<li><span class="fas fa-search"></span></li>
+			  		<a href="#"><li><span class="fas fa-search"></span></li></a>
 				</ul>
 			</div> 
 		</div>

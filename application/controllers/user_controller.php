@@ -45,6 +45,7 @@
 		}
 
 		public function showuser(){
+			$result['kategori'] = $this->product_model->loadAllCategory();
 			$this->load->library('session');
 			$result['user'] = $this->user_model->show_account($this->session->userdata('name'));
 			$this->load->view('account',$result);
