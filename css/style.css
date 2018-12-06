@@ -154,7 +154,6 @@ hr{
   display: none;
 }
 
-
 /******
 BERANDA
 *******/
@@ -169,11 +168,12 @@ BERANDA
 
 /*Navbar*/
 .navbar-right{
-  margin-left: 1100px;
+  float: right;
 }
+
 .navbar-right ul li{
 	display: inline;
-  padding: 14px 16px;
+  padding: 14px 5px;
 	list-style: none;
 }
 .navbar-right ul li:hover{
@@ -204,6 +204,9 @@ nav a{
 }
 nav a:hover{
 	color:#fff;
+}
+nav div ul{
+  display: inline;
 }
 .dropdown{
   	float: left;
@@ -333,6 +336,10 @@ input,select{
   min-width: 80%;
 }
 .content a{
+  color: #fff;
+  text-decoration: none;
+}
+.container a{
   color: #fff;
   text-decoration: none;
 }

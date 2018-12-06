@@ -62,3 +62,4 @@ $route['user-signup'] = 'user_controller/signup';
 $route['user-signin'] = 'user_controller/signin';
 $route['user-logout'] = 'user_controller/logout';
 $route['user-show'] = 'user_controller/showuser';
+$route['user-update'] = 'user_controller/update_user';

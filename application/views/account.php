@@ -14,7 +14,7 @@
 			<table>
 				<tr>
 					<td>
-						<table class="left-account" width="250px">
+						<table class="left-account">
 							<tr><td><img src="<?php echo base_url();?>image_account/default-avatar.png" class="user-pic"></td></tr>
 							<?php foreach($user as $usr){?>
 								<tr align="center"><td><font class="user-uname"><?php echo $usr['Username']; ?></font></td></tr>
@@ -26,7 +26,7 @@
 						</table>
 					</td>
 					<td>
-						<form method="post" name="ubahAkun">
+						<form method="post" name="ubahAkun" action="<?php echo base_url(); ?>index.php/user-update">
 						<table class="right-account">
 							<tr><td><font class="header-account">Informasi Akun</font></td><td class="align-right space-left"><input type="button" name="edit" value="Edit" class="btn-user"  id="btn-ubah"></td></tr>
 							<tr><td colspan="2"><hr></td></tr>
@@ -68,6 +68,11 @@
 			}
 
 			document.getElementsByClassName('btn-edit')[0].onclick = function() {
+				var i = 0;
+				while(i < document.getElementsByClassName('inputUbah').length){
+					document.getElementsByClassName('inputUbah')[i].disabled = "true";
+					i++;
+				}
 				ubah.style.display = "inline-block";
 				document.getElementsByClassName('btn-edit')[0].style.display = "none";
 				document.getElementsByClassName('btn-edit')[1].style.display = "none";

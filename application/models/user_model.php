@@ -26,8 +26,16 @@
 			return $result->result_array();
 		}
 
-		public function update_data_user($npm){
-			$this->db->set('');
+		public function update_data_user($iden,$data){
+			$this->db->set('Username', $data['Username']);
+			$this->db->set('Nama_Lengkap', $data['Nama_Lengkap']);
+			$this->db->set('email', $data['email']);
+			$this->db->set('password', $data['password']);
+			$this->db->set('no_hp', $data['no_hp']);
+			$this->db->set('fakultas', $data['fakultas']);
+			$this->db->set('alamat', $data['alamat']);
+			$this->db->where('Username', $iden);
+			$this->db->update('user');
 		}
 	}
 ?>

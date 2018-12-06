@@ -66,11 +66,13 @@
 				'Nama_Lengkap' => $this->input->post('nama_lengkap'),
 				'email' => $this->input->post('email'),
 				'password' => $this->input->post('password'),
-				'no_hp' => $this->input->post('nohp'),
+				'no_hp' => $this->input->post('hp'),
 				'fakultas' => $this->input->post('fakultas'),
 				'alamat' => $this->input->post('alamat')
 			);
-			$hasil['user'] = $this->user_model->show_account($this->session->userdata('name'));
+    		$this->user_model->update_data_user($this->session->userdata('name'),$data);
+    		$this->session->set_userdata('name',$this->input->post('username'));
+    		$this->showuser();
     	}
 
     	public function jualBarang(){
