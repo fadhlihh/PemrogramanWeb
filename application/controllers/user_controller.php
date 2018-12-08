@@ -55,6 +55,7 @@
     		$result['kategori'] = $this->product_model->loadAllCategory();
     		$this->load->library('session');
     		$this->session->unset_userdata('name');
+    		$this->session->unset_userdata('NPM');
     		$this->session->unset_userdata('status');
     		$this->load->view('home',$result);
     	}
@@ -75,9 +76,22 @@
     		$this->showuser();
     	}
 
+    	public function jualBarangPage(){
+    		$result['kategori'] = $this->product_model->loadAllCategory();
+    		$result['user'] = $this->user_model->show_account($this->session->userdata('name'));
+    		$this->load->view('jual_barang',$result);
+    	}
     	public function jualBarang(){
     		$result['kategori'] = $this->product_model->loadAllCategory();
-    		$this->load->view('jual_barang',$result);
+    		$data = array(
+				'NPM' => $this->input->post('NPM'), 
+				'id_kategori' => $this->input->post('id_kategori'),
+				'nama_barang' => $this->input->post('nama_barang'),
+				'deskripsi' => $this->input->post('deskripsi'),
+				'harga' => $this->input->post('harga')
+			);
+    		$this->product_model->insertBarang($data);
+    		$this->showuser();
     	}
 	}
 ?>

@@ -8,5 +8,8 @@
 			$result = $this->db->query("SELECT * FROM kategori");
 			return $result->result_array();
 		}
+		public function insertBarang($data){
+			$this->db->insert('barang',$data);
+		}
 	}
 ?>

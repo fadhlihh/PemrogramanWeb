@@ -11,17 +11,18 @@
 	<body>
 		<?php require("navbar.php");?>
 		<center>
-			<form>
+			<form action="<?php echo base_url();?>index.php/barang-jual" method="post">
 				<table>
 					<font class="header-account" color="black">Data Barang</font>
-					<tr><td>NPM Penjual</td></tr>
-					<tr><td><input type="text" name="NPM" style="width: 100%;"></td></tr>
+					<?php foreach($user as $usr){?>
+					<tr><td><input type="text" name="NPM" style="width: 100%; display: none;" value="<?php echo $usr['NPM']?>"></td></tr>
+					<?php } ?>
 					<tr><td>Nama Barang</td></tr>
 					<tr><td><input type="text" name="nama_barang" style="width: 100%;"></td></tr>
 					<tr><td>Kategori</td></tr>
 					<tr>
 						<td>
-							<select style="width: 100%;">
+							<select style="width: 100%;" name="id_kategori">
 								<?php foreach($kategori as $kat){?>
 								<option value="<?php echo $kat['id_kategori'] ?>"><?php echo $kat['nama_kategori']; ?></option>
 								<?php } ?>
@@ -33,7 +34,7 @@
 					<tr><td>Deskripsi</td></tr>
 					<tr>
 						<td colspan="2">
-							<textarea cols="70" rows="13"></textarea>
+							<textarea name="deskripsi" cols="70" rows="13"></textarea>
 						</td>
 					</tr>
 					<tr><td colspan="2"><input type="submit" name="submit" value="Jual"></td></tr>
