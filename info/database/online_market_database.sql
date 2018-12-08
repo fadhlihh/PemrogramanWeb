@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 25, 2018 at 06:16 AM
+-- Generation Time: Dec 08, 2018 at 01:08 PM
 -- Server version: 10.1.36-MariaDB
 -- PHP Version: 5.6.38
 
@@ -29,17 +29,17 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `barang` (
-  `id_barang` varchar(1000) COLLATE utf8_bin NOT NULL,
-  `npm` char(13) COLLATE utf8_bin NOT NULL,
-  `id_kategori` varchar(100) COLLATE utf8_bin NOT NULL,
-  `nama_barang` varchar(50) COLLATE utf8_bin NOT NULL,
-  `foto_barang` blob NOT NULL,
-  `foto_1` blob NOT NULL,
-  `foto_2` blob NOT NULL,
-  `foto_3` blob NOT NULL,
-  `deskripsi` varchar(500) COLLATE utf8_bin NOT NULL,
+  `id_barang` int(11) NOT NULL,
+  `NPM` char(13) NOT NULL,
+  `id_kategori` char(3) NOT NULL,
+  `nama_barang` varchar(50) NOT NULL,
+  `foto_barang1` blob NOT NULL,
+  `foto_barang2` blob NOT NULL,
+  `foto_barang3` blob NOT NULL,
+  `foto_barang4` blob NOT NULL,
+  `deskripsi` text NOT NULL,
   `harga` double NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -48,9 +48,9 @@ CREATE TABLE `barang` (
 --
 
 CREATE TABLE `kategori` (
-  `id_kategori` varchar(100) COLLATE utf8_bin NOT NULL,
-  `nama_kategori` varchar(50) COLLATE utf8_bin NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+  `id_kategori` char(3) NOT NULL,
+  `nama_kategori` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -59,18 +59,18 @@ CREATE TABLE `kategori` (
 --
 
 CREATE TABLE `user` (
-  `NPM` char(13) COLLATE utf8_bin NOT NULL,
-  `Username` varchar(20) COLLATE utf8_bin NOT NULL,
-  `Nama_Lengkap` varchar(100) COLLATE utf8_bin NOT NULL,
-  `password` char(60) COLLATE utf8_bin NOT NULL,
-  `email` varchar(50) COLLATE utf8_bin NOT NULL,
-  `alamat` varchar(255) COLLATE utf8_bin NOT NULL,
-  `no_hp` varchar(15) COLLATE utf8_bin NOT NULL,
-  `fakultas` varchar(50) COLLATE utf8_bin NOT NULL,
+  `NPM` char(12) NOT NULL,
+  `Username` varchar(20) NOT NULL,
+  `Nama_Lengkap` varchar(100) NOT NULL,
+  `password` varchar(20) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `alamat` varchar(250) NOT NULL,
+  `no_hp` varchar(15) NOT NULL,
+  `fakultas` varchar(50) NOT NULL,
   `foto_User` blob NOT NULL,
-  `tanggal_Bergabung` datetime NOT NULL,
+  `tanggal_Bergabung` date NOT NULL,
   `login_Terakhir` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Indexes for dumped tables
@@ -80,23 +80,34 @@ CREATE TABLE `user` (
 -- Indexes for table `barang`
 --
 ALTER TABLE `barang`
-  ADD PRIMARY KEY (`id_barang`(100)),
-  ADD KEY `kategori` (`id_kategori`),
-  ADD KEY `npm` (`npm`);
+  ADD PRIMARY KEY (`id_barang`),
+  ADD KEY `NPM` (`NPM`),
+  ADD KEY `id_kategori` (`id_kategori`);
 
 --
 -- Indexes for table `kategori`
 --
 ALTER TABLE `kategori`
-  ADD PRIMARY KEY (`id_kategori`),
-  ADD UNIQUE KEY `nama_kategori` (`nama_kategori`);
+  ADD PRIMARY KEY (`id_kategori`);
 
 --
 -- Indexes for table `user`
 --
 ALTER TABLE `user`
   ADD PRIMARY KEY (`NPM`),
-  ADD UNIQUE KEY `Username` (`Username`);
+  ADD UNIQUE KEY `Username` (`Username`),
+  ADD UNIQUE KEY `email` (`email`),
+  ADD UNIQUE KEY `no_hp` (`no_hp`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `barang`
+--
+ALTER TABLE `barang`
+  MODIFY `id_barang` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- Constraints for dumped tables
@@ -106,8 +117,8 @@ ALTER TABLE `user`
 -- Constraints for table `barang`
 --
 ALTER TABLE `barang`
-  ADD CONSTRAINT `kategori` FOREIGN KEY (`id_kategori`) REFERENCES `kategori` (`id_kategori`),
-  ADD CONSTRAINT `npm` FOREIGN KEY (`npm`) REFERENCES `user` (`NPM`);
+  ADD CONSTRAINT `barang_ibfk_1` FOREIGN KEY (`NPM`) REFERENCES `user` (`NPM`),
+  ADD CONSTRAINT `barang_ibfk_2` FOREIGN KEY (`id_kategori`) REFERENCES `kategori` (`id_kategori`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
