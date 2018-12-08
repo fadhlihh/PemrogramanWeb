@@ -25,13 +25,17 @@
 				</table>
 			</div>
 			<div class="col-sm-5 info">
-				<h3>Nama Produk</h3>
-				<h2>Rp.0</h2>
+				<?php foreach($barang as $brg){ ?>
+				<h3><?php echo $brg['nama_barang']; ?></h3>
+				<h2>Rp.<?php echo $brg['harga']; ?></h2>
 				<table>
-					<tr><td width="100px">Penjual</td><td>:</td></tr>
-					<tr><td width="100px">Kontak</td><td>:</td></tr>
+					<tr><td width="100px">Nama Penjual</td><td>:</td><td><?php echo $brg['Nama_Lengkap']; ?></td></tr>
+					<tr><td width="100px">NPM</td><td>:</td><td><?php echo $brg['NPM']; ?></td></tr>
+					<?php if($this->session->userdata('status')){?>
+					<tr><td width="100px">Kontak</td><td>:</td><td><?php echo $brg['no_hp']; }?></td></tr>
 				</table>
-				<p>Deskripsi barang dan tempat ada disini, tambahan kontak dapat disertakan disini</p>
+				<p><?php echo $brg['deskripsi'];?></p>
+				<?php }?>
 			</div>
 		</div>
 	</div>

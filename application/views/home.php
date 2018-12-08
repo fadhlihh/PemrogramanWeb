@@ -18,38 +18,22 @@
 		<?php require("navbar.php");?>
 		<div class="container content">
 			<div class="row">
+				<?php foreach($barang as $brg){?>
 				<div class="col-sm-4">
-					<a href="<?php echo base_url();?>index.php/product">
+					<a href="<?php echo base_url();?>index.php/product?id=<?php echo $brg['id_barang']?>">
 					<div class="panel panel-primary">
-			        <div class="panel-heading">Produk</div>
+			        <div class="panel-heading"><?php echo $brg['nama_barang'];?></div>
 			        <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" style="width:100%" alt="Image"></div>
-			        <div class="panel-footer">Buy this</div>
+			        <div class="panel-footer">Rp.<?php echo $brg['harga'];?></div>
 		      	</div>
 					</a>
 		    </div>
-		    <div class="col-sm-4">
-					<a href="<?php echo base_url();?>index.php/product">
-	      	<div class="panel panel-primary">
-	        	<div class="panel-heading">Produk</div>
-	        	<div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" style="width:100%" alt="Image"></div>
-	        	<div class="panel-footer">Buy that</div>
-	      	</div>
-					</a>
-		    </div>
-		    <div class="col-sm-4">
-		      <div class="panel panel-primary">
-						<a href="<?php echo base_url();?>index.php/product">
-		        <div class="panel-heading">Produk</div>
-		        <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" style="width:100%" alt="Image"></div>
-		        <div class="panel-footer">Buy please</div>
-		      </div>
-					</a>
-		    </div>
-				</div>
+		    <?php }?>
 				<span class="row">
 					<span class="col-sm-12"></span>
 				</span>
 			</div>
+		</div>	
 		<?php require("footer.php"); ?>
 	</body>
 </html>

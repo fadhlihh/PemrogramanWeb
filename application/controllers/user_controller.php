@@ -37,10 +37,10 @@
 					'status' => TRUE
 				);
 				$this->session->set_userdata($signin_status);
-				$this->load->view('home',$result);
+				header("Location: ".base_url()."index.php/home");
 			}else{
-				echo "<script type='text/javascript'>alert('Password/username salah');</script>";
-				$this->load->view('home',$result);
+				$this->session->set_userdata('gagal','true');
+				header("Location: ".base_url()."index.php/home");
 			}
 		}
 
@@ -57,7 +57,7 @@
     		$this->session->unset_userdata('name');
     		$this->session->unset_userdata('NPM');
     		$this->session->unset_userdata('status');
-    		$this->load->view('home',$result);
+    		header("Location: ".base_url()."index.php/home");
     	}
 
     	public function update_user(){
