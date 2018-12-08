@@ -10,7 +10,7 @@
 	</head>
 	<body>
 		<?php require("navbar.php");?>
-		<div class="account">
+		<div class="account content">
 			<table>
 				<tr>
 					<td>

@@ -16,7 +16,7 @@
 		  </div>
 		</div>
 		<?php require("navbar.php");?>
-		<div class="container">
+		<div class="container content">
 			<div class="row">
 				<div class="col-sm-4">
 					<a href="<?php echo base_url();?>index.php/product">

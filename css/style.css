@@ -59,6 +59,9 @@ body{
 .text-center{
 	text-align: center;
 }
+.content{
+  min-height: 100%;
+}
 .container{
 	padding-right: 15px;
   	padding-left: 15px;
