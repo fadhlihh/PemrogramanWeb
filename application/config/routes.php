@@ -67,3 +67,4 @@ $route['user-show'] = 'user_controller/showuser';
 $route['user-update'] = 'user_controller/update_user';
 $route['list-barang'] = 'user_controller/list_barang';
 $route['delete-barang'] = 'product_controller/deleteBarang';
+$route['edit-barang'] = 'product_controller/updateBarang';

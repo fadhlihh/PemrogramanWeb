@@ -40,5 +40,17 @@
 			$this->db->where('id_barang', $id);
 			$this->db->delete('barang');
 		}
+		public function update_barang($id,$data){
+			$this->db->set('id_kategori', $data['id_kategori']);
+			$this->db->set('nama_barang', $data['nama_barang']);
+			$this->db->set('deskripsi', $data['deskripsi']);
+			$this->db->set('harga', $data['harga']);
+			$this->db->set('foto_barang1', $data['foto_barang1']);
+			$this->db->set('foto_barang2', $data['foto_barang2']);
+			$this->db->set('foto_barang3', $data['foto_barang3']);
+			$this->db->set('foto_barang4', $data['foto_barang4']);
+			$this->db->where('id_barang', $id);
+			$this->db->update('barang');
+		}
 	}
 ?>

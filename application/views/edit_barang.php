@@ -12,14 +12,15 @@
 		<?php require("navbar.php");?>
 				<div class="content">	
 					<center>
-						<form action="<?php echo base_url();?>index.php/barang-jual" method="post" enctype="multipart/form-data">
+						<form action="<?php echo base_url();?>index.php/edit-barang?id=<?php echo $brg['id_barang']?>" method="post" enctype="multipart/form-data">
 							<table class="tbl-jual">
 								<font class="header-account" color="black">Data Barang</font>
-								<?php foreach($user as $usr){?>
+								<?php foreach($user as $usr){?>    
 								<tr><td><input type="text" name="NPM" style="width: 100%; display: none;" value="<?php echo $usr['NPM']?>"></td></tr>
 								<?php } ?>
+                                <?php foreach($barang as $brg){?>
 								<tr><td>Nama Barang</td></tr>
-								<tr><td><input type="text" name="nama_barang" style="width: 100%;" required></td></tr>
+								<tr><td><input type="text" name="nama_barang" style="width: 100%;" value="<?php echo $brg['nama_barang']?>" required></td></tr>
 								<tr><td>Kategori</td></tr>
 								<tr>
 									<td>
@@ -31,12 +32,12 @@
 									</td>
 								</tr>
 								<tr><td>Harga (Rupiah)</td></tr>
-								<tr><td><input type="number" name="harga" style="width: 100%;" required></td></tr>
+								<tr><td><input type="number" name="harga" style="width: 100%;"  value="<?php echo $brg['harga']?>" required></td></tr>
 								<tr><td>Foto Barang</td></tr>
-								<tr><td><input type="file" name="foto1" required></td></tr>
-								<tr><td><input type="file" name="foto2"></td></tr>
-								<tr><td><input type="file" name="foto3"></td></tr>
-								<tr><td><input type="file" name="foto4"></td></tr>
+								<tr><td><input type="file" name="foto1"  value="<?php echo $brg['foto_barang1']?>" required></td></tr>
+								<tr><td><input type="file" name="foto2"  value="<?php echo $brg['foto_barang2']?>" ></td></tr>
+								<tr><td><input type="file" name="foto3"  value="<?php echo $brg['foto_barang3']?>"></td></tr>
+								<tr><td><input type="file" name="foto4"  value="<?php echo $brg['foto_barang4']?>"></td></tr>
 								<tr><td>Deskripsi</td></tr>
 								<tr>
 									<td colspan="2">
@@ -44,6 +45,7 @@
 									</td>
 								</tr>
 								<tr><td colspan="2"><input type="submit" name="submit" value="Jual"></td></tr>
+                                <?php } ?>
 							</table>
 							</form>
 						</center>
