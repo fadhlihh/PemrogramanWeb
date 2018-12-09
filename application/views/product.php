@@ -18,9 +18,24 @@
 					<tr align="center"><td><img src="<?php echo base_url().'image_product/'.$brg['foto_barang1'];?>" class="gambar-main" height="300px" width="300px"></td></tr>
 					<tr align="center">
 						<td><img src="<?php echo base_url().'image_product/'.$brg['foto_barang1'];?>" id="gambar1" class="gambar-sub" height="71" width="71">
+						<?php if($brg['foto_barang2'] == 0){ ?>
+							<img src="<?php echo base_url();?>image_product/image_none.png" class="gambar-sub" id="gambar2" >
+						<?php }
+							else{ ?>
 							<img src="<?php echo base_url().'image_product/'.$brg['foto_barang2'];?>" id="gambar2" class="gambar-sub" height="71" width="71">
+						<?php } ?>
+						<?php if($brg['foto_barang3'] == 0){ ?>
+							<img src="<?php echo base_url();?>image_product/image_none.png" class="gambar-sub" id="gambar3" >
+						<?php }
+							else{ ?>
 							<img src="<?php echo base_url().'image_product/'.$brg['foto_barang3'];?>" id="gambar3" class="gambar-sub" height="71" width="71">
+						<?php } ?>
+						<?php if($brg['foto_barang4'] == 0){ ?>
+							<img src="<?php echo base_url();?>image_product/image_none.png" class="gambar-sub" id="gambar4" >
+						<?php }
+							else{ ?>
 							<img src="<?php echo base_url().'image_product/'.$brg['foto_barang4'];?>" id="gambar4" class="gambar-sub" height="71" width="71">
+						<?php } ?>												
 						</td>
 					</tr>
 				</table>
@@ -43,9 +58,9 @@
 	<script type="text/javascript">
 		var images = [
 		"<?php echo base_url().'image_product/'.$brg['foto_barang1']; ?>",
-		"<?php echo base_url().'image_product/'.$brg['foto_barang2']; ?>",
-		"<?php echo base_url().'image_product/'.$brg['foto_barang3']; ?>",
-		"<?php echo base_url().'image_product/'.$brg['foto_barang4']; ?>"
+		"<?php if($brg['foto_barang2'] == 0){echo base_url().'image_product/image_none.png';} else{echo base_url().'image_product/'.$brg['foto_barang2'];} ?>",
+		"<?php if($brg['foto_barang3'] == 0){echo base_url().'image_product/image_none.png';} else{echo base_url().'image_product/'.$brg['foto_barang3'];} ?>",
+		"<?php if($brg['foto_barang4'] == 0){echo base_url().'image_product/image_none.png';} else{echo base_url().'image_product/'.$brg['foto_barang4'];} ?>"
 		];
 
 		var image = document.getElementsByClassName('gambar-main')[0];

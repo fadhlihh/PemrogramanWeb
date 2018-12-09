@@ -34,9 +34,9 @@
 								<tr><td><input type="number" name="harga" style="width: 100%;"></td></tr>
 								<tr><td>Foto Barang</td></tr>
 								<tr><td><input type="file" name="foto1" required></td></tr>
-								<tr><td><input type="file" name="foto2" required></td></tr>
-								<tr><td><input type="file" name="foto3" required></td></tr>
-								<tr><td><input type="file" name="foto4" required></td></tr>
+								<tr><td><input type="file" name="foto2"></td></tr>
+								<tr><td><input type="file" name="foto3"></td></tr>
+								<tr><td><input type="file" name="foto4"></td></tr>
 								<tr><td>Deskripsi</td></tr>
 								<tr>
 									<td colspan="2">

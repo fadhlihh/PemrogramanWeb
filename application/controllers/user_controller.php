@@ -102,50 +102,62 @@
     		$this->load->view('jual_barang',$result);
     	}
     	public function jualBarang(){
+			$target_dir = "image_product/";
 			$file_type1 = $_FILES['foto1']['type'];
 			$file_type2 = $_FILES['foto2']['type'];
 			$file_type3 = $_FILES['foto3']['type'];
 			$file_type4 = $_FILES['foto4']['type'];
+			$imgName2 = NULL;
+			$imgName3 = NULL;
+			$imgName4 = NULL;
 			$allowed = array("image/jpeg", "image/gif", "image/png");
 			if(!in_array($file_type1,$allowed )) {
 				$error_message = 'Only jpg, gif, and png files are allowed.';
 				echo $error_message;
 				exit();
 			}
-			if(!in_array($file_type2,$allowed )) {
-				$error_message = 'Only jpg, gif, and png files are allowed.';
-				echo $error_message;
-				exit();
-			}
-			if(!in_array($file_type3,$allowed )) {
-				$error_message = 'Only jpg, gif, and png files are allowed.';
-				echo $error_message;
-				exit();
-			}
-			if(!in_array($file_type4,$allowed )) {
-				$error_message = 'Only jpg, gif, and png files are allowed.';
-				echo $error_message;
-				exit();
-			}
-			  
-			$target_dir = "image_product/";
 			$target_file1 = $target_dir . time().basename($_FILES["foto1"]["name"]);
-			$target_file2 = $target_dir . time().basename($_FILES["foto2"]["name"]);
-			$target_file3 = $target_dir . time().basename($_FILES["foto3"]["name"]);
-			$target_file4 = $target_dir . time().basename($_FILES["foto4"]["name"]);
 			$imageFileType = pathinfo($target_file1,PATHINFO_EXTENSION);
-			$imageFileType = pathinfo($target_file2,PATHINFO_EXTENSION);
-			$imageFileType = pathinfo($target_file3,PATHINFO_EXTENSION);
-			$imageFileType = pathinfo($target_file4,PATHINFO_EXTENSION);
 			$imgName1 = time().basename($_FILES["foto1"]["name"]);
-			$imgName2 = time().basename($_FILES["foto2"]["name"]);
-			$imgName3 = time().basename($_FILES["foto3"]["name"]);
-			$imgName4 = time().basename($_FILES["foto4"]["name"]);
 			move_uploaded_file($_FILES["foto1"]["tmp_name"], $target_file1);
-			move_uploaded_file($_FILES["foto2"]["tmp_name"], $target_file2);
-			move_uploaded_file($_FILES["foto3"]["tmp_name"], $target_file3);
-			move_uploaded_file($_FILES["foto4"]["tmp_name"], $target_file4);
 
+			if($file_type2 != NULL ){
+				if(!in_array($file_type2,$allowed )) {
+					$error_message = 'Only jpg, gif, and png files are allowed.';
+					echo $error_message;
+					exit();
+				}
+				$target_file2 = $target_dir . time().basename($_FILES["foto2"]["name"]);
+				$imageFileType = pathinfo($target_file2,PATHINFO_EXTENSION);
+				$imgName2 = time().basename($_FILES["foto2"]["name"]);
+				move_uploaded_file($_FILES["foto2"]["tmp_name"], $target_file2);
+			}
+			
+			if($file_type3 != NULL){
+				if(!in_array($file_type3,$allowed )) {
+					$error_message = 'Only jpg, gif, and png files are allowed.';
+					echo $error_message;
+					exit();
+				}
+				$target_file3 = $target_dir . time().basename($_FILES["foto3"]["name"]);
+				$imageFileType = pathinfo($target_file3,PATHINFO_EXTENSION);
+				$imgName3 = time().basename($_FILES["foto3"]["name"]);
+				move_uploaded_file($_FILES["foto3"]["tmp_name"], $target_file3);
+			}
+
+			if($file_type4 != NULL){
+				if(!in_array($file_type4,$allowed )) {
+					$error_message = 'Only jpg, gif, and png files are allowed.';
+					echo $error_message;
+					exit();
+				}
+				$target_file4 = $target_dir . time().basename($_FILES["foto4"]["name"]);
+				$imageFileType = pathinfo($target_file4,PATHINFO_EXTENSION);
+				$imgName4 = time().basename($_FILES["foto4"]["name"]);
+				move_uploaded_file($_FILES["foto4"]["tmp_name"], $target_file4);
+			}			  
+			
+			
     		$result['kategori'] = $this->product_model->loadAllCategory();
     		$data = array(
 				'NPM' => $this->input->post('NPM'), 
