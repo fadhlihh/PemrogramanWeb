@@ -9,23 +9,24 @@
 	<title>Padjadjaran Online Market - Product</title>
 </head>
 <body>
+<?php foreach($barang as $brg){ ?>
 	<?php require("navbar.php"); ?>
 	<div class="content">
 		<div class="row">
 			<div class="col-sm-3">
 				<table>
-					<tr align="center"><td><img src="<?php echo base_url();?>image_product/sapu1.jpg" class="gambar-main" height="300px" width="300px"></td></tr>
+					<tr align="center"><td><img src="<?php echo base_url().'image_product/'.$brg['foto_barang1'];?>" class="gambar-main" height="300px" width="300px"></td></tr>
 					<tr align="center">
-						<td><img src="<?php echo base_url();?>image_product/sapu1.jpg" id="gambar1" class="gambar-sub" height="71" width="71">
-							<img src="<?php echo base_url();?>image_product/sapu2.jpg" id="gambar2" class="gambar-sub" height="71" width="71">
-							<img src="<?php echo base_url();?>image_product/sapu3.jpg" id="gambar3" class="gambar-sub" height="71" width="71">
-							<img src="<?php echo base_url();?>image_product/sapu4.jpg" id="gambar4" class="gambar-sub" height="71" width="71">
+						<td><img src="<?php echo base_url().'image_product/'.$brg['foto_barang1'];?>" id="gambar1" class="gambar-sub" height="71" width="71">
+							<img src="<?php echo base_url().'image_product/'.$brg['foto_barang2'];?>" id="gambar2" class="gambar-sub" height="71" width="71">
+							<img src="<?php echo base_url().'image_product/'.$brg['foto_barang3'];?>" id="gambar3" class="gambar-sub" height="71" width="71">
+							<img src="<?php echo base_url().'image_product/'.$brg['foto_barang4'];?>" id="gambar4" class="gambar-sub" height="71" width="71">
 						</td>
 					</tr>
 				</table>
 			</div>
 			<div class="col-sm-5 info">
-				<?php foreach($barang as $brg){ ?>
+				
 				<h3><?php echo $brg['nama_barang']; ?></h3>
 				<h2>Rp.<?php echo $brg['harga']; ?></h2>
 				<table>
@@ -41,10 +42,10 @@
 	</div>
 	<script type="text/javascript">
 		var images = [
-		"<?php echo base_url();?>image_product/sapu1.jpg",
-		"<?php echo base_url();?>image_product/sapu2.jpg",
-		"<?php echo base_url();?>image_product/sapu3.jpg",
-		"<?php echo base_url();?>image_product/sapu4.jpg"
+		"<?php echo base_url().'image_product/'.$brg['foto_barang1']; ?>",
+		"<?php echo base_url().'image_product/'.$brg['foto_barang2']; ?>",
+		"<?php echo base_url().'image_product/'.$brg['foto_barang3']; ?>",
+		"<?php echo base_url().'image_product/'.$brg['foto_barang4']; ?>"
 		];
 
 		var image = document.getElementsByClassName('gambar-main')[0];

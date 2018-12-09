@@ -37,5 +37,11 @@
 			$this->db->where('Username', $iden);
 			$this->db->update('user');
 		}
+
+		public function update_photo($iden,$foto){
+			$this->db->set('foto_User', $foto['foto_user']);
+			$this->db->where('Username', $iden);
+			$this->db->update('user');
+		}
 	}
 ?>

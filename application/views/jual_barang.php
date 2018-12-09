@@ -12,7 +12,7 @@
 		<?php require("navbar.php");?>
 				<div class="content">	
 					<center>
-						<form action="<?php echo base_url();?>index.php/barang-jual" method="post">
+						<form action="<?php echo base_url();?>index.php/barang-jual" method="post" enctype="multipart/form-data">
 							<table class="tbl-jual">
 								<font class="header-account" color="black">Data Barang</font>
 								<?php foreach($user as $usr){?>
@@ -32,6 +32,11 @@
 								</tr>
 								<tr><td>Harga (Rupiah)</td></tr>
 								<tr><td><input type="number" name="harga" style="width: 100%;"></td></tr>
+								<tr><td>Foto Barang</td></tr>
+								<tr><td><input type="file" name="foto1" required></td></tr>
+								<tr><td><input type="file" name="foto2" required></td></tr>
+								<tr><td><input type="file" name="foto3" required></td></tr>
+								<tr><td><input type="file" name="foto4" required></td></tr>
 								<tr><td>Deskripsi</td></tr>
 								<tr>
 									<td colspan="2">
@@ -40,7 +45,7 @@
 								</tr>
 								<tr><td colspan="2"><input type="submit" name="submit" value="Jual"></td></tr>
 							</table>
-						</form>
+							</form>
 						</center>
 				</div>
 		<?php require("footer.php");?>

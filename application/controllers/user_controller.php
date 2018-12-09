@@ -8,7 +8,6 @@
 			$this->load->model('product_model');
 		}
 		public function index(){
-			
 		}
 
 		public function signup(){
@@ -61,6 +60,25 @@
     	}
 
     	public function update_user(){
+			$file_type = $_FILES['foto_user']['type'];
+			$allowed = array("image/jpeg", "image/gif", "image/png");
+			if($file_type != NULL){
+				if(!in_array($file_type,$allowed)) {
+					$error_message = 'Only jpg, gif, and png files are allowed.';
+					echo $error_message;
+					exit();
+				}
+				$target_dir = "image_account/";
+				$target_file = $target_dir . time().basename($_FILES["foto_user"]["name"]);
+				$imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
+				$imgName = time().basename($_FILES["foto_user"]["name"]);
+				move_uploaded_file($_FILES["foto_user"]["tmp_name"], $target_file);
+				$foto = array(
+					'foto_user'=>$imgName
+				);
+				$this->user_model->update_photo($this->session->userdata('name'),$foto);
+			}
+
     		$result['kategori'] = $this->product_model->loadAllCategory();
     		$data = array( 
 				'Username' => $this->input->post('username'),
@@ -71,7 +89,8 @@
 				'fakultas' => $this->input->post('fakultas'),
 				'alamat' => $this->input->post('alamat')
 			);
-    		$this->user_model->update_data_user($this->session->userdata('name'),$data);
+			
+			$this->user_model->update_data_user($this->session->userdata('name'),$data);
     		$this->session->set_userdata('name',$this->input->post('username'));
     		$this->showuser();
     	}
@@ -82,16 +101,64 @@
     		$this->load->view('jual_barang',$result);
     	}
     	public function jualBarang(){
+			$file_type1 = $_FILES['foto1']['type'];
+			$file_type2 = $_FILES['foto2']['type'];
+			$file_type3 = $_FILES['foto3']['type'];
+			$file_type4 = $_FILES['foto4']['type'];
+			$allowed = array("image/jpeg", "image/gif", "image/png");
+			if(!in_array($file_type1,$allowed )) {
+				$error_message = 'Only jpg, gif, and png files are allowed.';
+				echo $error_message;
+				exit();
+			}
+			if(!in_array($file_type2,$allowed )) {
+				$error_message = 'Only jpg, gif, and png files are allowed.';
+				echo $error_message;
+				exit();
+			}
+			if(!in_array($file_type3,$allowed )) {
+				$error_message = 'Only jpg, gif, and png files are allowed.';
+				echo $error_message;
+				exit();
+			}
+			if(!in_array($file_type4,$allowed )) {
+				$error_message = 'Only jpg, gif, and png files are allowed.';
+				echo $error_message;
+				exit();
+			}
+			  
+			$target_dir = "image_product/";
+			$target_file1 = $target_dir . time().basename($_FILES["foto1"]["name"]);
+			$target_file2 = $target_dir . time().basename($_FILES["foto2"]["name"]);
+			$target_file3 = $target_dir . time().basename($_FILES["foto3"]["name"]);
+			$target_file4 = $target_dir . time().basename($_FILES["foto4"]["name"]);
+			$imageFileType = pathinfo($target_file1,PATHINFO_EXTENSION);
+			$imageFileType = pathinfo($target_file2,PATHINFO_EXTENSION);
+			$imageFileType = pathinfo($target_file3,PATHINFO_EXTENSION);
+			$imageFileType = pathinfo($target_file4,PATHINFO_EXTENSION);
+			$imgName1 = time().basename($_FILES["foto1"]["name"]);
+			$imgName2 = time().basename($_FILES["foto2"]["name"]);
+			$imgName3 = time().basename($_FILES["foto3"]["name"]);
+			$imgName4 = time().basename($_FILES["foto4"]["name"]);
+			move_uploaded_file($_FILES["foto1"]["tmp_name"], $target_file1);
+			move_uploaded_file($_FILES["foto2"]["tmp_name"], $target_file2);
+			move_uploaded_file($_FILES["foto3"]["tmp_name"], $target_file3);
+			move_uploaded_file($_FILES["foto4"]["tmp_name"], $target_file4);
+
     		$result['kategori'] = $this->product_model->loadAllCategory();
     		$data = array(
 				'NPM' => $this->input->post('NPM'), 
 				'id_kategori' => $this->input->post('id_kategori'),
 				'nama_barang' => $this->input->post('nama_barang'),
 				'deskripsi' => $this->input->post('deskripsi'),
-				'harga' => $this->input->post('harga')
+				'harga' => $this->input->post('harga'),
+				'foto_barang1'=>$imgName1,
+				'foto_barang2'=>$imgName2,
+				'foto_barang3'=>$imgName3,
+				'foto_barang4'=>$imgName4
 			);
     		$this->product_model->insertBarang($data);
     		$this->showuser();
-    	}
+		}
 	}
 ?>
