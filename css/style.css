@@ -176,6 +176,7 @@ BERANDA
 /*Navbar*/
 .navbar-right{
   float: right;
+  margin-right: 60px;
 }
 
 .navbar-right ul li{
@@ -254,6 +255,9 @@ nav div ul{
 }
 .dropdown:hover .dropdown-content {
   	display: block;
+}
+.navbar-right .dropdown{
+  margin-right: 20px;
 }
 
 /*For Sign In*/
@@ -370,6 +374,7 @@ input,select{
 }
 .panel-body {
   padding: 15px;
+  max-height: 280px;
 }
 .panel-heading {
   padding: 10px 15px;
@@ -383,6 +388,11 @@ input,select{
   border-top: 1px solid #ddd;
   border-bottom-right-radius: 3px;
   border-bottom-left-radius: 3px;
+}
+
+.panel-body img{
+  max-height: 18vw;
+  min-height: 18vw;
 }
 
 /***********
@@ -447,6 +457,34 @@ PAGE CONTACT
 }
 .contact{
 	text-align: center;
+}
+
+/****************
+PAGE LIST BARANG
+*****************/
+
+.tbl-listbarang{
+  border-collapse: collapse;
+}
+.tbl-listbarang tr th{
+  text-align: center;
+  background-color: #292828;
+  color:#fff;
+  height: 3vw;
+}
+.tbl-listbarang tr td{
+  vertical-align: middle;
+  text-align: center;
+  background-color: #fff;
+  color:#000;
+  border-bottom: 1px solid #292828;
+}
+.tbl-listbarang tr td a{
+  color: #808080;
+  font-weight: bolder;
+}
+.tbl-listbarang tr td a:hover{
+  color:red;
 }
 
 footer{

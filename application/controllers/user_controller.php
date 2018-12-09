@@ -168,10 +168,16 @@
 				'foto_barang1'=>$imgName1,
 				'foto_barang2'=>$imgName2,
 				'foto_barang3'=>$imgName3,
-				'foto_barang4'=>$imgName4
+				'foto_barang4'=>$imgName4,
+				'tanggal_jual'=>date('Y-m-d H:i:s')
 			);
     		$this->product_model->insertBarang($data);
     		$this->showuser();
+		}
+		public function list_barang(){
+			$result['kategori'] = $this->product_model->loadAllCategory();
+			$result['barang'] = $this->product_model->show_user_barang($this->session->userdata('name'));
+			$this->load->view('list_barang',$result);
 		}
 	}
 ?>

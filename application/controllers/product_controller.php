@@ -19,5 +19,10 @@
 			$result['barang'] = $this->product_model->showBarangKategori($id);
 			$this->load->view('home',$result);
 		}
+		public function deleteBarang(){
+			$id = $_GET['id'];
+			$this->product_model->delete_barang($id);
+			header("Location: ".base_url()."index.php/list-barang");
+		}
 	}
 ?>

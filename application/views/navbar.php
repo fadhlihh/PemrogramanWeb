@@ -15,15 +15,21 @@
 		    	</div>
 		  	</div>
 		  	<a href="<?php echo base_url();?>index.php/contact">Contact</a>
+		  	<a href="#"><span class="fas fa-search"></span></a>
 			<div class="navbar-right">
-				<ul>
 					<?php if($this->session->userdata('status')){ ?>
-					<li><a href="<?php echo base_url();?>index.php/user-show"><?php echo $this->session->userdata('name'); ?></a></li>
+					<div class="dropdown">
+						<button class="dropbtn"><span><?php echo $this->session->userdata('name'); ?>
+		      				<i class="fa fa-caret-down"></i></span>
+		    			</button>
+		    			<div class="dropdown-content">
+		    				<a href="<?php echo base_url();?>index.php/user-show">Profile</a>
+		    				<a href="<?php echo base_url();?>index.php/user-logout">Logout</a>
+		    			</div>
+					</div>
 					<?php }else{ ?>
-					<a href="#"><li id="signin">Sign in</li></a>
+					<a href="#" id="signin">Sign in</a>
 					<?php } ?>
-			  		<a href="#"><li><span class="fas fa-search"></span></li></a>
-				</ul>
 			</div>
 		</div>
 	</nav>
