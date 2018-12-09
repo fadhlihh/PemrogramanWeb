@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>css/bootstrap-grid.min.css">
-		<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>fonts/font-awesome/css/all.css">
+		<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>css/fonts/font-awesome/css/all.css">
 		<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>css/style.css">
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -12,13 +12,11 @@
 		<?php require("navbar.php");?>
 				<div class="content">	
 					<center>
-						<form action="<?php echo base_url();?>index.php/edit-barang?id=<?php echo $brg['id_barang']?>" method="post" enctype="multipart/form-data">
+						<?php foreach($barang as $brg){?>
+						<form action="<?php echo base_url();?>index.php/update-barang?id=<?php echo $brg['id_barang']?>" method="post" enctype="multipart/form-data">
 							<table class="tbl-jual">
-								<font class="header-account" color="black">Data Barang</font>
-								<?php foreach($user as $usr){?>    
-								<tr><td><input type="text" name="NPM" style="width: 100%; display: none;" value="<?php echo $usr['NPM']?>"></td></tr>
-								<?php } ?>
-                                <?php foreach($barang as $brg){?>
+								<font class="header-account" color="black">Data Barang</font>  
+								<tr><td><input type="text" name="NPM" style="width: 100%; display: none;" value="<?php echo $brg['NPM']?>"></td></tr>
 								<tr><td>Nama Barang</td></tr>
 								<tr><td><input type="text" name="nama_barang" style="width: 100%;" value="<?php echo $brg['nama_barang']?>" required></td></tr>
 								<tr><td>Kategori</td></tr>
@@ -41,7 +39,7 @@
 								<tr><td>Deskripsi</td></tr>
 								<tr>
 									<td colspan="2">
-										<textarea name="deskripsi" cols="70" rows="13"></textarea>
+										<textarea name="deskripsi" cols="70" rows="13"><?php echo $brg['deskripsi']?></textarea>
 									</td>
 								</tr>
 								<tr><td colspan="2"><input type="submit" name="submit" value="Jual"></td></tr>

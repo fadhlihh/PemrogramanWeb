@@ -17,7 +17,7 @@
 		  	<a href="<?php echo base_url();?>index.php/contact">Contact</a>
 		  	<a href="#">
 		  	<div class="search">
-		  		<form method="get">
+		  		<form method="get" action="<?php echo base_url();?>index.php/search">
 		  			<input type="search" name="search" placeholder="Search Something"><input type="submit" class="search" value="&#xf002;"/>
 		  		</form>
 		  	</div>

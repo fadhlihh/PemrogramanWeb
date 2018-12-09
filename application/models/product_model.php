@@ -36,6 +36,10 @@
 			$result = $this->db->get();
 			return $result->result_array();
 		}
+		public function show_search_barang($data){
+			$result=$this->db->query("SELECT * FROM barang WHERE nama_barang LIKE '%".$data."%' ORDER BY tanggal_jual DESC LIMIT 9");
+			return $result->result_array();
+		}
 		public function delete_barang($id){
 			$this->db->where('id_barang', $id);
 			$this->db->delete('barang');

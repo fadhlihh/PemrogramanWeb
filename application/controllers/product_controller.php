@@ -19,16 +19,22 @@
 			$result['barang'] = $this->product_model->showBarangKategori($id);
 			$this->load->view('home',$result);
 		}
+		public function search(){
+			$result['kategori'] = $this->product_model->loadAllCategory();
+			$result['barang'] = $this->product_model->show_search_barang($this->input->get('search'));
+			$this->load->view('home',$result);
+		}
 		public function deleteBarang(){
 			$id = $_GET['id'];
 			$this->product_model->delete_barang($id);
 			header("Location: ".base_url()."index.php/list-barang");
 		}
 
-		public function showuser(){
+		public function editBarang(){
+			$id = $_GET['id'];
 			$result['kategori'] = $this->product_model->loadAllCategory();
 			$this->load->library('session');
-			$result['user'] = $this->user_model->show_account($this->session->userdata('name'));
+			$result['barang'] = $this->product_model->infoBarang($id);
 			$this->load->view('edit_barang',$result);
 		}
 		
