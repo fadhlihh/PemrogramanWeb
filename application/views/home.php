@@ -23,7 +23,7 @@
 					<a href="<?php echo base_url();?>index.php/product?id=<?php echo $brg['id_barang']?>">
 					<div class="panel panel-primary">
 			        <div class="panel-heading"><?php echo $brg['nama_barang'];?></div>
-			        <div class="panel-body" style="width: 1000px; height: 300px;"><img src="<?php echo base_url().'image_product/'.$brg['foto_barang1'] ?>" class="img-responsive" width="57%" height="100%"></div>
+			        <div class="panel-body"><img src="<?php echo base_url().'image_product/'.$brg['foto_barang1'] ?>" style="width: 100%;"></div>
 			        <div class="panel-footer">Rp.<?php echo $brg['harga'];?></div>
 		      	</div>
 					</a>

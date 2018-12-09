@@ -11,6 +11,7 @@
 		}
 
 		public function signup(){
+			$result['kategori'] = $this->product_model->loadAllCategory();
 			$data = array(
 				'NPM' => $this->input->post('npm'), 
 				'Username' => $this->input->post('username'),
@@ -21,7 +22,7 @@
 				'tanggal_Bergabung' => date('Y-m-d H:i:s')
 			);
 			$this->user_model->insert_signup($data);
-			$this->load->view('home');
+			header("Location: ".base_url()."index.php/home");
 		}
 
 		public function signin(){
