@@ -15,7 +15,13 @@
 		    	</div>
 		  	</div>
 		  	<a href="<?php echo base_url();?>index.php/contact">Contact</a>
-		  	<a href="#"><span class="fas fa-search"></span></a>
+		  	<a href="#">
+		  	<div class="search">
+		  		<form method="get">
+		  			<input type="search" name="search" placeholder="Search Something"><input type="submit" class="search" value="&#xf002;"/>
+		  		</form>
+		  	</div>
+		  	</a>
 			<div class="navbar-right">
 					<?php if($this->session->userdata('status')){ ?>
 					<div class="dropdown">
