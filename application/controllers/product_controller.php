@@ -13,5 +13,11 @@
 			$result['barang'] = $this->product_model->infoBarang($id);
 			$this->load->view('product',$result);
 		}
+		public function kategori(){
+			$result['kategori'] = $this->product_model->loadAllCategory();
+			$id = $_GET['id'];
+			$result['barang'] = $this->product_model->showBarangKategori($id);
+			$this->load->view('home',$result);
+		}
 	}
 ?>
