@@ -54,6 +54,7 @@ $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 $route['home'] = 'home_controller';
 $route['product'] = 'product_controller';
+$route['kategori'] = 'product_controller/kategori';
 $route['contact'] = 'home_controller/contact';
 $route['account'] = 'home_controller/account';
 $route['user-jual'] = 'user_controller/jualBarangPage';

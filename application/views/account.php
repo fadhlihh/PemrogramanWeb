@@ -31,7 +31,7 @@
 						</table>
 					</td>
 					<td>
-						<form method="post" name="ubahAkun" action="<?php echo base_url(); ?>index.php/user-update" enctype="multipart/form-data">
+						<form method="post" name="ubahAkun" action="<?php echo base_url(); ?>index.php/user-update" enctype="multipart/form-data" autocomplete="off">
 						<table class="right-account">
 							<tr><td><font class="header-account">Informasi Akun</font></td><td class="align-right space-left"><input type="button" name="edit" value="Edit" class="btn-user"  id="btn-ubah"></td></tr>
 							<tr><td colspan="2"><hr></td></tr>
@@ -69,6 +69,10 @@
 
 			document.getElementsByClassName('btn-edit')[1].onclick = function() {
 				ubah.style.display = "inline-block";
+				while(i < document.getElementsByClassName('inputUbah').length){
+					document.getElementsByClassName('inputUbah')[i].disabled = "true";
+					i++;
+				}
 				document.getElementsByClassName('btn-edit')[0].style.display = "none";
 				document.getElementsByClassName('btn-edit')[1].style.display = "none";
 			}

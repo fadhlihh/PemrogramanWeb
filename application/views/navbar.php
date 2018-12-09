@@ -10,7 +10,7 @@
 		    	</button>
 		    	<div class="dropdown-content">
 		    		<?php foreach($kategori as $kat){ ?>
-			      	<a href="#"><?php echo $kat['nama_kategori']; ?></a>
+			      	<a href="<?php echo base_url()?>index.php/kategori?id=<?php echo $kat['id_kategori'];?>"><?php echo $kat['nama_kategori']; ?></a>
 			      	<?php } ?>
 		    	</div>
 		  	</div>

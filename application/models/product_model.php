@@ -23,5 +23,9 @@
 			$result = $this->db->get();
 			return $result->result_array();
 		}
+		public function showBarangKategori($id){
+			$result=$this->db->query("SELECT * FROM barang WHERE id_kategori='$id' LIMIT 9");
+			return $result->result_array();
+		}
 	}
 ?>
