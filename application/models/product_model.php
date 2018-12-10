@@ -4,6 +4,9 @@
 			parent::__construct();
 			$this->load->database();
 		}
+		 public function barang_count() {
+       		return $this->db->count_all("barang");
+  		 }
 		public function loadAllCategory(){
 			$result = $this->db->query("SELECT * FROM kategori");
 			return $result->result_array();
@@ -11,8 +14,8 @@
 		public function insertBarang($data){
 			$this->db->insert('barang',$data);
 		}
-		public function showBarang(){
-			$result=$this->db->query("SELECT * FROM barang ORDER BY tanggal_jual DESC LIMIT 9");
+		public function showBarang($limit,$start){
+			$result=$this->db->query("SELECT * FROM barang ORDER BY tanggal_jual DESC LIMIT $start, $limit");
 			return $result->result_array();
 		}
 		public function infoBarang($id){
@@ -23,8 +26,8 @@
 			$result = $this->db->get();
 			return $result->result_array();
 		}
-		public function showBarangKategori($id){
-			$result=$this->db->query("SELECT * FROM barang WHERE id_kategori='$id' ORDER BY tanggal_jual DESC LIMIT 9");
+		public function showBarangKategori($id,$limit,$start){
+			$result=$this->db->query("SELECT * FROM barang WHERE id_kategori='$id' ORDER BY tanggal_jual DESC LIMIT $start, $limit");
 			return $result->result_array();
 		}
 		public function show_user_barang($iden){
@@ -36,8 +39,8 @@
 			$result = $this->db->get();
 			return $result->result_array();
 		}
-		public function show_search_barang($data){
-			$result=$this->db->query("SELECT * FROM barang WHERE nama_barang LIKE '%".$data."%' ORDER BY tanggal_jual DESC LIMIT 9");
+		public function show_search_barang($data,$limit,$start){
+			$result=$this->db->query("SELECT * FROM barang WHERE nama_barang LIKE '%".$data."%' ORDER BY tanggal_jual DESC LIMIT $start, $limit");
 			return $result->result_array();
 		}
 		public function delete_barang($id){

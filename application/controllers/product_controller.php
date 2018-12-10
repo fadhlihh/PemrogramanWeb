@@ -6,6 +6,7 @@
 			parent::__construct();
 			$this->load->model('product_model');
 			$this->load->library('session');
+			$this->load->library("pagination");
 		}
 		public function index(){
 			$result['kategori'] = $this->product_model->loadAllCategory();
@@ -16,12 +17,65 @@
 		public function kategori(){
 			$result['kategori'] = $this->product_model->loadAllCategory();
 			$id = $_GET['id'];
-			$result['barang'] = $this->product_model->showBarangKategori($id);
+			$config["base_url"] = base_url() . "index.php/kategori";
+			$config["total_rows"] = $this->product_model->barang_count();
+	    	$config["per_page"] = 9;
+	    	$config["uri_segment"] = 2;
+	    	$config["next_link"] = "NEXT";
+	    	$config["prev_link"] = "PREV";
+	    	$config["first_link"] = "First";
+	    	$config["last_link"] = "Last";
+	    	$config["full_tag_open"] = "<div class='page'>";
+	    	$config["full_tag_close"] = "</div>";
+	    	$config["prev_tag_open"] = "<b class='prev_page'>";
+	    	$config["prev_tag_close"] = "</b>";
+	    	$config["next_tag_open"] = "<b class='next_page'>";
+	    	$config["next_tag_close"] = "</b>";
+	    	$config["cur_tag_open"] = "<b class='current_page'>";
+	    	$config["cur_tag_close"] = "</b>";
+	    	$config["num_tag_open"] = "<b class='num_page'>";
+	    	$config["num_tag_close"] = "</b>";
+	    	$config["last_tag_open"] = "<b class='last_page'>";
+	    	$config["last_tag_close"] = "</b>";
+	    	$config["first_tag_open"] = "<b class='next_page'>";
+	    	$config["first_tag_close"] = "</b>";
+	    	$config['reuse_query_string'] = FALSE;
+	    	$this->pagination->initialize($config);
+	    	$page = ($this->uri->segment(2)) ? $this->uri->segment(2) : 0;
+
+			$result['barang'] = $this->product_model->showBarangKategori($id,$config["per_page"],$page);
+			$result["links"] = $this->pagination->create_links();
 			$this->load->view('home',$result);
 		}
 		public function search(){
 			$result['kategori'] = $this->product_model->loadAllCategory();
-			$result['barang'] = $this->product_model->show_search_barang($this->input->get('search'));
+			$config["base_url"] = base_url() . "index.php/search";
+			$config["total_rows"] = $this->product_model->barang_count();
+	    	$config["per_page"] = 9;
+	    	$config["uri_segment"] = 2;
+	    	$config["next_link"] = "NEXT";
+	    	$config["prev_link"] = "PREV";
+	    	$config["first_link"] = "First";
+	    	$config["last_link"] = "Last";
+	    	$config["full_tag_open"] = "<div class='page'>";
+	    	$config["full_tag_close"] = "</div>";
+	    	$config["prev_tag_open"] = "<b class='prev_page'>";
+	    	$config["prev_tag_close"] = "</b>";
+	    	$config["next_tag_open"] = "<b class='next_page'>";
+	    	$config["next_tag_close"] = "</b>";
+	    	$config["cur_tag_open"] = "<b class='current_page'>";
+	    	$config["cur_tag_close"] = "</b>";
+	    	$config["num_tag_open"] = "<b class='num_page'>";
+	    	$config["num_tag_close"] = "</b>";
+	    	$config["last_tag_open"] = "<b class='last_page'>";
+	    	$config["last_tag_close"] = "</b>";
+	    	$config["first_tag_open"] = "<b class='next_page'>";
+	    	$config["first_tag_close"] = "</b>";
+	    	$config['reuse_query_string'] = FALSE;
+	    	$this->pagination->initialize($config);
+	    	$page = ($this->uri->segment(2)) ? $this->uri->segment(2) : 0;
+			$result['barang'] = $this->product_model->show_search_barang($this->input->get('search'),$config["per_page"],$page);
+			$result["links"] = $this->pagination->create_links();
 			$this->load->view('home',$result);
 		}
 		public function deleteBarang(){

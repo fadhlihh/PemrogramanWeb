@@ -1,9 +1,4 @@
 @font-face {
-  font-family: Barney;
-  src: url('fonts/oliversbarney.ttf');
-}
-
-@font-face {
   font-family: Font Awesome;
   src: url('fonts/fa-solid-900.ttf');
 }
@@ -428,6 +423,24 @@ input[type="text"],input[type="number"],input[type="email"],input[type="password
 .panel-body img{
   max-height: 18vw;
   min-height: 18vw;
+}
+.page{
+  margin-top: 3vw;
+  cursor: context-menu;
+}
+.next_page{
+  margin-left: 10px;
+}
+.prev_page{
+  margin-right: 10px;
+}
+.num_page{
+  margin-left: 10px;
+  margin-right: 10px;
+  cursor: context-menu;
+}
+.current_page{
+  color:red;
 }
 
 /***********

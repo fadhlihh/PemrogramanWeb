@@ -27,12 +27,12 @@
 			        <div class="panel-footer">Rp.<?php echo $brg['harga'];?></div>
 		      	</div>
 					</a>
-		    </div>
+		    	</div>
 		    <?php }?>
-				<span class="row">
-					<span class="col-sm-12"></span>
-				</span>
 			</div>
+			<center>
+				<?php echo $links;?>
+			</center>
 		</div>	
 		<?php require("footer.php"); ?>
 	</body>
