@@ -4,7 +4,16 @@
 			parent::__construct();
 			$this->load->database();
 		}
-		 public function barang_count() {
+		public function kategori_count($id){
+			$result=$this->db->query("SELECT * FROM barang WHERE id_kategori='$id' ORDER BY tanggal_jual DESC");
+			return $result->num_rows();
+		}
+		public function search_count($data){
+			$result=$this->db->query("SELECT * FROM barang WHERE nama_barang LIKE '%".$data."%'");
+			return $result->num_rows();	
+		}
+
+		public function barang_count() {
        		return $this->db->count_all("barang");
   		 }
 		public function loadAllCategory(){

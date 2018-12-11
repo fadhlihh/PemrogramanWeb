@@ -430,14 +430,17 @@ input[type="text"],input[type="number"],input[type="email"],input[type="password
 }
 .next_page{
   margin-left: 10px;
+  color: #000;
 }
 .prev_page{
   margin-right: 10px;
+  color: #000;
 }
 .num_page{
   margin-left: 10px;
   margin-right: 10px;
   cursor: context-menu;
+  color: #000;
 }
 .current_page{
   color:red;

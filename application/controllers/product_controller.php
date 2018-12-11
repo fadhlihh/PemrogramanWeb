@@ -18,7 +18,7 @@
 			$result['kategori'] = $this->product_model->loadAllCategory();
 			$id = $_GET['id'];
 			$config["base_url"] = base_url() . "index.php/kategori";
-			$config["total_rows"] = $this->product_model->barang_count();
+			$config["total_rows"] = $this->product_model->kategori_count($id);
 	    	$config["per_page"] = 9;
 	    	$config["uri_segment"] = 2;
 	    	$config["next_link"] = "NEXT";
@@ -39,10 +39,9 @@
 	    	$config["last_tag_close"] = "</b>";
 	    	$config["first_tag_open"] = "<b class='next_page'>";
 	    	$config["first_tag_close"] = "</b>";
-	    	$config['reuse_query_string'] = FALSE;
+	    	$config['reuse_query_string'] = TRUE;
 	    	$this->pagination->initialize($config);
 	    	$page = ($this->uri->segment(2)) ? $this->uri->segment(2) : 0;
-
 			$result['barang'] = $this->product_model->showBarangKategori($id,$config["per_page"],$page);
 			$result["links"] = $this->pagination->create_links();
 			$this->load->view('home',$result);
@@ -50,7 +49,7 @@
 		public function search(){
 			$result['kategori'] = $this->product_model->loadAllCategory();
 			$config["base_url"] = base_url() . "index.php/search";
-			$config["total_rows"] = $this->product_model->barang_count();
+			$config["total_rows"] = $this->product_model->search_count($this->input->get('search'));
 	    	$config["per_page"] = 9;
 	    	$config["uri_segment"] = 2;
 	    	$config["next_link"] = "NEXT";
@@ -71,7 +70,7 @@
 	    	$config["last_tag_close"] = "</b>";
 	    	$config["first_tag_open"] = "<b class='next_page'>";
 	    	$config["first_tag_close"] = "</b>";
-	    	$config['reuse_query_string'] = FALSE;
+	    	$config['reuse_query_string'] = TRUE;
 	    	$this->pagination->initialize($config);
 	    	$page = ($this->uri->segment(2)) ? $this->uri->segment(2) : 0;
 			$result['barang'] = $this->product_model->show_search_barang($this->input->get('search'),$config["per_page"],$page);
