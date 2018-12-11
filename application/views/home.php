@@ -24,7 +24,7 @@
 					<div class="panel panel-primary">
 			        <div class="panel-heading"><?php echo $brg['nama_barang'];?></div>
 			        <div class="panel-body"><img src="<?php echo base_url().'image_product/'.$brg['foto_barang1'] ?>" style="width: 100%;"></div>
-			        <div class="panel-footer">Rp.<?php echo $brg['harga'];?></div>
+			        <div class="panel-footer">Rp<?php echo $brg['harga'];?></div>
 		      	</div>
 					</a>
 		    	</div>
