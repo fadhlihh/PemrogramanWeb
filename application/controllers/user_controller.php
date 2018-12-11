@@ -6,6 +6,7 @@
 			parent::__construct();
 			$this->load->model('user_model');
 			$this->load->model('product_model');
+			date_default_timezone_set("Asia/Jakarta");
 		}
 		public function index(){
 		}
@@ -37,6 +38,7 @@
 					'status' => TRUE
 				);
 				$this->session->set_userdata($signin_status);
+				$this->user_model->lastLogin(date('Y-m-d H:i:s'),$this->session->userdata('name'));
 				header("Location: ".base_url()."index.php/home");
 			}else{
 				$this->session->set_userdata('gagal','true');

@@ -24,8 +24,8 @@
 						<?php } ?>
 								<tr align="center"><td><font class="user-uname"><?php echo $usr['Username']; ?></font></td></tr>
 								<tr align="center"><td class="mar-1"><font class="light"><?php echo $usr['fakultas']; ?></font></td></tr>
-								<tr align="center"><td class="mar-2"><font class="difcolor"><?php echo $usr['login_Terakhir']; ?></font></td></tr>
-								<tr align="center"><td><font class="difcolor"><?php echo $usr['tanggal_Bergabung']; ?></font></td></tr>
+								<tr align="center"><td class="mar-2"><font class="difcolor">Terakhir Login <?php echo $usr['login_Terakhir']; ?></font></td></tr>
+								<tr align="center"><td><font class="difcolor">Bergabung <?php echo $usr['tanggal_Bergabung']; ?></font></td></tr>
 							<tr align="center"><td class="mar-2"><a href="<?php echo base_url();?>index.php/user-jual"><button class="btn-user">Jual Barang</button></a></td></tr>
 							<tr align="center"><td class="mar-1"><a href="<?php echo base_url();?>index.php/list-barang"><button class="btn-user">List Barang</button></a></td></tr>
 							<tr align="center"><td class="mar-1"><a href="<?php echo base_url();?>index.php/user-logout"><button class="btn-user">Log Out</button></a></td></tr>

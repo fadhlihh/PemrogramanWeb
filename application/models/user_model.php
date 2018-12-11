@@ -21,6 +21,12 @@
 			}
 		}
 
+		public function lastLogin($date,$iden){
+			$this->db->set('login_Terakhir', $date);
+			$this->db->where('Username', $iden);
+			$this->db->update('user');
+		}
+
 		public function show_account($iden){
 			$result=$this->db->query("SELECT * FROM user WHERE Username = '".$iden."'");
 			return $result->result_array();

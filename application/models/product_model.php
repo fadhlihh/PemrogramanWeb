@@ -12,7 +12,6 @@
 			$result=$this->db->query("SELECT * FROM barang WHERE nama_barang LIKE '%".$data."%'");
 			return $result->num_rows();	
 		}
-
 		public function barang_count() {
        		return $this->db->count_all("barang");
   		 }

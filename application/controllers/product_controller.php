@@ -7,6 +7,7 @@
 			$this->load->model('product_model');
 			$this->load->library('session');
 			$this->load->library("pagination");
+			date_default_timezone_set("Asia/Jakarta");
 		}
 		public function index(){
 			$result['kategori'] = $this->product_model->loadAllCategory();

@@ -39,11 +39,11 @@
 								<tr><td><input type="file" name="foto4"></td></tr>
 								<tr><td>Deskripsi</td></tr>
 								<tr>
-									<td colspan="2">
+									<td>
 										<textarea name="deskripsi" cols="70" rows="13"></textarea>
 									</td>
 								</tr>
-								<tr><td colspan="2"><input type="submit" name="submit" value="Jual"></td></tr>
+								<tr><td><input type="submit" name="submit" value="Jual" class="btn-jual"></td></tr>
 							</table>
 							</form>
 						</center>
