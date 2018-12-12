@@ -42,13 +42,14 @@
 			</div>
 			<div class="col-sm-5 info">
 				
-				<h3><?php echo $brg['nama_barang']; ?></h3>
+				<h3 style="font-size: 30px"><?php echo $brg['nama_barang']; ?></h3>
 				<h2>Rp<?php echo $brg['harga']; ?></h2>
-				<table>
-					<tr><td width="100px">Nama Penjual</td><td>:</td><td><?php echo $brg['Nama_Lengkap']; ?></td></tr>
-					<tr><td width="100px">NPM</td><td>:</td><td><?php echo $brg['NPM']; ?></td></tr>
+				<table style="font-size: 20px;">
+					<tr><td width="150px">Nama Penjual</td><td>:</td><td><?php echo $brg['Nama_Lengkap']; ?></td></tr>
+					<tr><td width="150px">NPM</td><td>:</td><td><?php echo $brg['NPM']; ?></td></tr>
+					<tr><td width="150px">Kontak</td><td>:</td>
 					<?php if($this->session->userdata('status')){?>
-					<tr><td width="100px">Kontak</td><td>:</td><td><?php echo $brg['no_hp']; }?></td></tr>
+					<td><?php echo $brg['no_hp'];?></td><?php }else{?><td class="redFont">Login terlebih dahulu untuk melihat kontak</td><?php } ?></tr>
 				</table>
 				<p><?php echo $brg['deskripsi'];?></p>
 				<?php }?>

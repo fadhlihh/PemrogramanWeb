@@ -46,7 +46,7 @@
 				<form method="post" action="<?php echo base_url();?>index.php/user-signin">
 					<table class="tbl-signin">
 						<tr><td><h1>Sign in</h1></td></tr>
-						<tr><td><input type="text" name="username" placeholder="Username / Email / NPM" required></td></tr>
+						<tr><td><input type="text" name="username" placeholder="Username" required></td></tr>
 						<tr><td><input type="Password" name="password" placeholder="Kata Sandi" required></td></tr>
 						<tr><td width="100%"><input type="submit" name="submit" value="Sign In"></td></tr>
 						<tr><td><span class="gagal">Username atau Password salah</span></td></tr>

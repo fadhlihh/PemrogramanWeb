@@ -3,6 +3,10 @@
   src: url('fonts/fa-solid-900.ttf');
 }
 
+.redFont{
+  color: red;
+}
+
 html {
   	font-family: sans-serif;
   	height: 100%;
