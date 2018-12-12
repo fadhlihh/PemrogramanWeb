@@ -50,6 +50,7 @@
 					<tr><td width="150px">Kontak</td><td>:</td>
 					<?php if($this->session->userdata('status')){?>
 					<td><?php echo $brg['no_hp'];?></td><?php }else{?><td class="redFont">Login terlebih dahulu untuk melihat kontak</td><?php } ?></tr>
+					<tr><td>Deskripsi</td><td>:</td></tr>
 				</table>
 				<p><?php echo $brg['deskripsi'];?></p>
 				<?php }?>
